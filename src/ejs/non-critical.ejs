@@ -1,0 +1,2 @@
+<% htmlWebpackPlugin.files.css.forEach(function(css){ %><link rel="preload" href="{{ alias('@rootUrl') }}<%= css %>" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<% }) %>

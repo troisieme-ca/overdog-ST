@@ -1,0 +1,12 @@
+/* base layer */
+@import "./base/root.css";
+@import "./base/container.css";
+
+/* utilities layer */
+@import "./utilities/richtext.css";
+@import "./utilities/height.css";
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

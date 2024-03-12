@@ -1,0 +1,33 @@
+{% extends '_base/layout' %}
+{# 
+-------------------------------------------------------------------
+   You can override the default seoTitle on a per-template basis
+-------------------------------------------------------------------
+#}	
+{% set seoTitle = currentSite.group.name %}
+
+{# 
+-------------------------------------------------------------------
+   Block header
+   Example of overriding the default header
+-------------------------------------------------------------------
+#}	
+{% block header %}
+   <header class="container pt-full mb-half">
+      <h1 class="fluid-text-8 font-bold leading-none text-slate-800 mb-6 flex">Overdog
+         <span class="-mt-3 ml-2 flex items-center justify-center w-[0.8em] h-[0.8em] bg-blue-500 rounded-full">
+            <span class="text-[0.3em] text-white leading-none mt-0.5">ST</span>
+         </span>
+      </h1>
+      <h2 class="text-8 leading-tight mb-4">Congratulations! You have successfully installed Overdog for Craft CMS.</h2>
+   </header>   
+{% endblock %}
+
+{# 
+-------------------------------------------------------------------
+   Block content
+-------------------------------------------------------------------
+#}	
+{% block content %}
+
+{% endblock %}

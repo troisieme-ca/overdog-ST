@@ -1,0 +1,14 @@
+{# 
+-------------------------------------------------------------------
+   If you are in development mode, go to yoururl.com/404 to display this page
+-------------------------------------------------------------------
+#}	
+{% extends '_base/layout' %}
+
+{% block content %}
+
+  <div class="container">
+    <h3>{{ 'This page does not exist! Please use the main menu to go to another page.'|t }}</h3>
+  </div>
+
+{% endblock %}

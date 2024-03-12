@@ -1,0 +1,6 @@
+{
+  "buttons": ["bold", "italic", "unorderedlist", "sup", "orderedlist", "link"],
+  "linkNewTab": true,
+  "toolbarFixed": true,
+  "minHeight": "200px"
+}

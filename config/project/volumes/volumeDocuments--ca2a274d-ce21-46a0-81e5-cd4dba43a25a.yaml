@@ -1,0 +1,39 @@
+fieldLayouts:
+  706b4658-fc90-4344-bd0d-0f66db9a1173:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 6ff760a4-f64a-4298-aac1-9574d1381222
+            warning: null
+            width: 100
+        name: Content
+        uid: 65d64273-5a45-417d-a08a-65b683c0eb0f
+fs: fileSystemsDocuments
+handle: volumeDocuments
+name: Documents
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''
