@@ -1,15 +1,7 @@
 {
-    "name": "3ejoueur/overdog",
+    "name": "troisieme/overdog",
     "description": "A Craft CMS scaffolding project",
-    "version": "2.4",
-    "authors": [
-        {
-            "name": "Ian Reid Langevin",
-            "email": "info@reidlangevin.com",
-            "homepage": "https://www.reidlangevin.com",
-            "role": "Developer"
-        }
-    ],
+    "version": "1.0.0",
     "keywords": [
         "Craft CMS starter",
         "Craft CMS boilerplate",
