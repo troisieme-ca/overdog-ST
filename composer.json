@@ -7,16 +7,23 @@
         "Craft CMS boilerplate",
         "Overdog",
         "Craft CMS",
-        "Ian Reid"
+        "troisième",
+        "3ejoueur"
     ],
     "support": {
         "docs": "https://st.overdog.io"
     },
     "license": "MIT",
+    "authors": [
+        {
+          "name": "troisième",
+          "homepage": "https://troisieme.ca/"
+        }
+      ],
     "type": "project",
     "require": {
         "craftcms/aws-s3": "^2.0.1",
-        "craftcms/cms": "4.5.12",
+        "craftcms/cms": "4.8.1",
         "craftcms/redactor": "^3.0",
         "ianreid/switcher": "^1.1",
         "vlucas/phpdotenv": "^5.4.0"
