@@ -9,7 +9,8 @@ settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
-  allowedKinds: null
+  allowedKinds:
+    - image
   branchLimit: null
   defaultUploadLocationSource: 'volume:00548086-7b2f-44f0-a0e4-c9d91fcaae9e' # Images
   defaultUploadLocationSubpath: /seo
@@ -18,23 +19,12 @@ settings:
   maxRelations: 1
   minRelations: null
   previewMode: full
-  restrictFiles: false
+  restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:00548086-7b2f-44f0-a0e4-c9d91fcaae9e' # Images
   restrictedLocationSubpath: /seo
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
-  selectionLabel: null
+  selectionLabel: 'Ajouter une image'
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

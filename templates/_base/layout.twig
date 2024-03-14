@@ -76,10 +76,10 @@
          These meta tags define Open Graph properties for the page.
       -------------------------------------------------------------------
       #}	
-		<meta property="og:locale" content="{{ currentSite.language }}">
+		<meta property="og:locale" content="{{ currentSite.language|replace({'-':'_'}) }}">
       {% if availableSites|length %}
          {% for item in availableSites %}
-            <meta property="og:locale:alternate" content="{{ item.site.language }}">
+            <meta property="og:locale:alternate" content="{{ item.site.language|replace({'-':'_'}) }}">
          {% endfor %}
       {% endif %}
 		<meta property="og:site_name" content="{{ currentSite.group.name }}">

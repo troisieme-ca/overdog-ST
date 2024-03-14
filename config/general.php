@@ -54,7 +54,7 @@ return [
          'subLeft' => true,
       ],
 
-      // Overdog opinionated - remove the X-Powered-By Craft header should be sent, helping to identify that the site is running on Craft
+      // Overdog opinionated - remove the X-Powered-By: Craft CMS header should be sent, helping to identify that the site is running on Craft
       'sendPoweredByHeader' => false,
 
       // Overdog opinionated - Aliases
@@ -76,6 +76,8 @@ return [
    'dev' => [
       // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
       'devMode' => true,
+      // This should be set to true for development and staging environments. Default value being false.
+      'disallowRobots' => true,
       // Comment out or set to true if you want to test local caching
       'enableTemplateCaching' => false,
       // Overdog opinionated - Add MAMP support for sql dump
@@ -85,6 +87,8 @@ return [
 
    // Staging environment settings
    'staging' => [
+      // This should be set to true for development and staging environments. Default value being false.
+      'disallowRobots' => true,
       // Important - False to prevent administrative changes from being made on staging
       'allowAdminChanges' => false,
    ],
@@ -93,5 +97,7 @@ return [
    'production' => [
       // Important - False to prevent administrative changes from being made on production
       'allowAdminChanges' => false,
+      // Comment out when using a cron job to run the queue/run command
+      // 'runQueueAutomatically' => false,
    ],
 ];

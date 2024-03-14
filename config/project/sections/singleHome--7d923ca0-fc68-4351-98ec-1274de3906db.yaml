@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: false
 handle: singleHome
-name: Home
+name: Accueil
 previewTargets:
   -
     __assoc__:
@@ -16,7 +16,7 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  fc2cb4bb-e016-46f9-a830-653496da88d7: # English
+  fc2cb4bb-e016-46f9-a830-653496da88d7: # Français
     enabledByDefault: true
     hasUrls: true
     template: _sections/single/home/index
