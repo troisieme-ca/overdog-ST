@@ -1,6 +1,6 @@
 {
-  "buttons": ["formatting", "redo", "undo", "bold", "italic", "underline", "unorderedlist", "orderedlist", "link"],
-  "plugins": ["table", "inlinestyle", "alignment"],
+  "buttons": ["redo", "undo", "format", "bold", "italic", "unorderedlist", "orderedlist", "sup", "sub", "link"],
+  "plugins": ["table", "specialchars", "custom"],
   "linkNewTab": true,
   "toolbarFixed": true,
   "minHeight": "200px",
