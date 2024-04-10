@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{{currentSite.language}}">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ currentSite.language }}">
 	<head>
       {# 
       -------------------------------------------------------------------
@@ -105,7 +105,7 @@
    -------------------------------------------------------------------
    #}		
 	<body>
-		<a class="sr-only" href="#main">{{ 'Skip to main content'|t }}</a>
+		<a class="sr-only focus:static focus:w-auto focus:h-auto" href="#main">{{ 'Skip to main content'|t }}</a>
       {# 
       -------------------------------------------------------------------
          Navbar
@@ -127,7 +127,7 @@
          You can override this on a per-template basis using the block tag.
       -------------------------------------------------------------------
       #}
-      <main id="#main">
+      <main id="main">
 			{% block content %}{% endblock %}
 		</main>
       {# 

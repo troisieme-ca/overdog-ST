@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2024-04-10
+
+### Added
+
+- Add tailwind classes to Skip to main content link
+
+### Changed
+
+- Add spaces between brackets and value in lang attribute on html tag
+- Rename components folder to shared and adjust tailwind config consequently
+- Update Craft CMS version from 4.8.4 to 4.8.8
+- Update plugin AWS-S3 version from 2.2.0 to 2.2.1
+
+### Fixed
+
+- Fixed Skip to main content link in removing # in main tag id
+
 ## [1.3.0] - 2024-03-21
 
 ### Added
