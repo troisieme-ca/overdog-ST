@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2024-04-16
+
+### Added
+
+- Add @web alias
+- Add new filesystem "Asset transforms"
+
+### Changed
+
+- Associate assets volumes transform filesystem to new "Asset transforms" filesystem
+- Update robot.txt to disallow new folder asset-transforms
+- Update Craft CMS version from 4.8.8 to 4.8.9
+
 ## [1.4.0] - 2024-04-10
 
 ### Added

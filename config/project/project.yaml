@@ -1,4 +1,4 @@
-dateModified: 1710441315
+dateModified: 1713300289
 elementSources:
   craft\elements\Entry:
     -
@@ -26,6 +26,13 @@ email:
     username: $EMAIL_USERNAME
   transportType: craft\mail\transportadapters\Smtp
 fs:
+  fileSystemsAssetTransforms:
+    hasUrls: true
+    name: 'Asset transforms'
+    settings:
+      path: '@webroot/asset-transforms'
+    type: craft\fs\Local
+    url: '@web/asset-transforms'
   fileSystemsDocuments:
     hasUrls: true
     name: Documents

@@ -63,5 +63,5 @@ name: Images
 sortOrder: 2
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: ''
-transformSubpath: ''
+transformFs: fileSystemsAssetTransforms
+transformSubpath: images

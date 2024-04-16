@@ -59,6 +59,7 @@ return [
 
       // Overdog opinionated - Aliases
       'aliases' => [
+         '@web' => App::env('SITE_URL'),
          '@webroot' => dirname(__DIR__) . '/web',
          '@rootUrl' => App::env('SITE_URL'),
          /**
