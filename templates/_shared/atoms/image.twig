@@ -1,0 +1,138 @@
+{#
+    RESPONSIVE IMAGE WITH DYNAMIC SIZES
+    @param {object} image
+    @param {array} sizes (mobile first)
+    @param {string} loading (lazy|eager|auto)
+    @param {string} class
+    @param {string} placeholder (path)
+    @param {string} alt (override default)
+    @param {string} attributes
+    @param {bool} caption
+#}
+
+{# NOTE: Give a default value to the placeholder #}
+{% set image = image|default(null) %}
+
+{% set placeholder = placeholder|default(null) %}
+{% set alt = image.alt|default('') %}
+
+{% set class = class|default('') %}
+{% set attributes = attributes|default(false) %}
+
+{% if image %}
+
+    {% set query = "&auto=compress,format&q=75" %}
+
+    {# Focal point #}
+    {% set fp = image.focalPoint|default(null) %}
+    {% if fp %}
+        {# NOTE: Add "&fp-debug=true" at the end for a visual guide of the focal point position #}
+        {% set query = query ~ "&fp-x=#{ fp.x }&fp-y=#{ fp.y }" %}
+    {% endif %}
+
+    {% set loading = loading|default('lazy') %}
+    {% set sizes = sizes|default([
+        {
+            breakpoint: 0,
+            width: 90
+        },
+    ])|reverse %}
+
+    {# Array of possible image sizes for srcset #}
+    {% set srcsetSizes = [
+        320,
+        640,
+        768,
+        960,
+        1024,
+        1280,
+        1440,
+    ] %}
+    {# Image sizes filtered by breakpoints/sizes #}
+    {% set filteredSizes = [] %}
+    {# Formatted srcset attribute to display in HTML #}
+    {% set srcset = "" %}
+    {# Sizes attribute formatted to display in HTML #}
+    {% set formattedSizes = "" %}
+
+    {# Set median size for default src #}
+    {% set srcIndex = srcsetSizes | length / 2 %}
+    {% set src = "#{ image.url }&w=480#{ query }" %}
+
+    {# Filter the array to keep only the relevant sizes #}
+    {% for size in srcsetSizes %}
+        {% for item in sizes %}
+            {% if (item.breakpoint == 0 and loop.first) or
+                (loop.first and item.width / 100 * item.breakpoint > item.width / 100 * size * 0.9) or 
+                (item.width / 100 * item.breakpoint > size * 0.9) or
+                (loop.last and (item.width / 100 * 1440 > size * 0.9))
+            %}
+                {% set filteredSizes = filteredSizes|merge([size])|unique %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {# Generate the sizes attribute #}
+    {% for item in sizes %}
+        {% if not loop.last %}
+            {% set formattedSizes = formattedSizes ~ "(min-width: #{ item.breakpoint|default(0) }px) #{ item.width }vw, " %}
+        {% else %}
+            {% set formattedSizes = formattedSizes ~ item.width ~ 'vw' %}
+        {% endif %}
+    {% endfor %}
+
+    {# Generate srcset attribute #}
+    {% for size in filteredSizes %}
+        {% set srcset = srcset ~ "#{ image.url }&w=#{ size }#{ query } #{ size }w#{ not loop.last ? ', ' }" %}
+    {% endfor %}
+
+    {# Caption #}
+    {% set imageCaption = image.assetsCaption|default(null) %}
+
+    <figure>
+        <img
+            class="{{ class }} {{ image.extension != 'png' and image.extension != 'svg' ? ' bg-gray-200 text-gray-200 object-cover' : 'object-contain' }}"
+            {% if fp %}
+            style="object-position: {{ fp.x * 100 ~ "%" }} {{ fp.y * 100 ~ "%" }}"
+            {% endif %}
+            height="{{ image.height|default('') }}"
+            width="{{ image.width|default('') }}"
+            loading="{{ loading }}"
+            {% if loading == 'lazy' %}
+            decoding="async"
+            fetchpriority="high"
+            {% else %}
+            decoding="sync"
+            {% endif %}
+            srcset="{{ srcset|default('') }}"
+            src="{{ src|default('') }}"
+            sizes="{{ formattedSizes|default('(min-width: 768px) 45vw, 90vw') }}"
+            alt="{{ alt }}"
+            {{ attributes ? attributes }}
+        >
+        {% if caption and imageCaption %}
+        <figcaption class="absolute bottom-0 w-full p-sixth text-center bg-white text-black text-sm">{{ imageCaption }}</figcaption>
+        {% endif %}
+    </figure>
+   
+
+{% elseif placeholder %}
+   
+   {# Defined placeholder #}
+    <img 
+        src="{{ placeholder }}" 
+        width="1920"
+        height="1180"
+        class="{{ class }} bg-gray-200 text-gray-200"
+        alt=""
+        {{ attributes ? attributes }}
+    >
+   
+{% else %}
+
+    {# Generic placeholder #}
+    <div class="absolute inset-0 bg-gray-200 text-white">
+        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[75%] max-h-[75%]"><use xlink:href="#wave-logo"></use></svg>
+    </div>
+   
+{% endif %}

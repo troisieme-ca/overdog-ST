@@ -1,0 +1,27 @@
+columnSuffix: xxktofdg
+contentColumnType: text
+fieldGroup: 81304912-0d5b-4feb-9926-1e423206864e # Assets
+handle: assetsCaption
+instructions: null
+name: Légende
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: minimalist.json
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

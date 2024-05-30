@@ -1,4 +1,4 @@
-dateModified: 1713300289
+dateModified: 1717099587
 elementSources:
   craft\elements\Entry:
     -
@@ -75,9 +75,11 @@ meta:
   __names__:
     7d923ca0-fc68-4351-98ec-1274de3906db: Accueil # Accueil
     9b18697d-2ce6-492b-b628-1a649bb22eaa: 'SEO Open Graph Image' # SEO Open Graph Image
+    80e7bc64-a66a-42dd-b8a5-da4e1d3f4f1f: Légende # Légende
     228f18ac-b71c-4021-8f66-0d34f29a880f: 'SEO global' # SEO global
     0499bd9f-6aa1-4590-9c16-e86191e0a2b8: Accueil # Accueil
     00548086-7b2f-44f0-a0e4-c9d91fcaae9e: Images # Images
+    81304912-0d5b-4feb-9926-1e423206864e: Assets # Assets
     a7870a18-8ec8-42bd-bb94-ea232c8eb066: SEO # SEO
     b4a35b8a-1eff-4137-817a-17e468158aed: 'Public Schema' # Public Schema
     c1436119-37a0-4b5b-9538-52c47b611fd2: $SITE_GROUP # $SITE_GROUP

@@ -8,8 +8,6 @@
    */
    :root {
       --spacing: 6rem;
-      @screen md { --spacing: 7rem; }
-      @screen xl { --spacing: 8rem; }
    }
 
 
