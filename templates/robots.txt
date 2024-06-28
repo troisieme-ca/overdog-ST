@@ -9,4 +9,7 @@ Disallow: /vendor/
 Disallow: /.env
 Disallow: /admin/
 Disallow: /admin
+{% else %}
+User-agent: *
+Disallow: /
 {% endif %}

@@ -17,9 +17,15 @@
       <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="{{ entry.seoDescription|default(globalSeo.seoDescription ?? '') }}">
+      
+      {% if getenv('CRAFT_ENVIRONMENT') == "production" %}
       {# override by setting robotIndex var in your template, ex: for clients portal #}
 		<meta name="robots" content="{{ robotIndex|default('index, follow') }}">
-		<meta name="mobile-web-app-capable" content="yes">
+      {% else %}
+      <meta name="robots" content="noindex, nofollow" />
+      {% endif %}
+      
+      <meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
       {# 
