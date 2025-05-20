@@ -1,6 +1,6 @@
 {
   "name": "overdog",
-  "version": "1.6.2",
+  "version": "1.6.2.1",
   "description": "Webpack and dev dependencies for Overdog",
   "author": "troisième",
   "license": "MIT",
