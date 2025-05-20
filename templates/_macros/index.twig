@@ -28,5 +28,5 @@
 -------------------------------------------------------------------
 #}
 {%- macro phoneLabel(phoneNumber, extension = null) -%}
-   {{ phoneNumber }}{%- if extension -%}{{ ' ext: '|t ~ extension }}{%- endif -%}
+   {{ phoneNumber }}{%- if extension -%}{{ ' ext. '|t ~ extension }}{%- endif -%}
 {%- endmacro -%}
