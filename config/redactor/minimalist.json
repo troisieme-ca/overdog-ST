@@ -1,9 +1,0 @@
-{
-  "buttons": ["bold", "italic", "sup", "sub", "link"],
-  "plugins": ["specialchars", "custom"],
-  "breakline": true,
-  "pasteLinks": false,
-  "pastePlainText": true,
-  "pasteBlockTags": [],
-  "pasteInlineTags": []
-}

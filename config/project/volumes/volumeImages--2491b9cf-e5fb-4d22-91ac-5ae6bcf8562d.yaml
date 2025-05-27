@@ -1,5 +1,7 @@
+altTranslationKeyFormat: null
+altTranslationMethod: site
 fieldLayouts:
-  3deedf6c-4cfa-4eab-99ac-c8d63705558d:
+  a3305f71-c091-4eb5-a271-40d781a0bb30:
     tabs:
       -
         elementCondition: null
@@ -9,9 +11,11 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2025-05-27T16:09:50+00:00'
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,28 +24,27 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 2c1fd938-132e-4980-8c7c-e7a7d76f7df9
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: ab4865f8-c8b1-4cb5-ab64-3c3670ef1266
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 114600ef-c785-48f9-bab5-460ba83eb9b7
+        uid: ea94e3d3-ad55-400a-a452-7d3c57133aba
         userCondition: null
-handle: singleHome
-hasTitleField: true
-name: Accueil
-section: 7d923ca0-fc68-4351-98ec-1274de3906db # Accueil
-showStatusField: true
-slugTranslationKeyFormat: null
-slugTranslationMethod: site
-sortOrder: 1
-titleFormat: '{section.name|raw}'
+fs: fileSystemsImages
+handle: volumeImages
+name: Images
+sortOrder: 2
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+transformFs: fileSystemsAssetTransforms
+transformSubpath: images

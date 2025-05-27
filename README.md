@@ -1,9 +1,9 @@
-# Overdog - A scaffolding project for Craft CMS 4.x
+# Overdog - A scaffolding project for Craft CMS 5.x
 
 This Craft CMS starter project is for developers who want to build a website or small web application from a solid foundation based on best practices.
 
 ## Version
-1.6.2.1
+2.0.0
 
 ## Installation
 

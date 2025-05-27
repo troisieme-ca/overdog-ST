@@ -1,18 +1,4 @@
-dateModified: 1747772740
-elementSources:
-  craft\elements\Entry:
-    -
-      defaultSort:
-        - postDate
-        - desc
-      disabled: false
-      key: '*'
-      tableAttributes:
-        - link
-      type: native
-    -
-      key: singles
-      type: native
+dateModified: 1748364785
 email:
   fromEmail: $EMAIL_SYSTEM_ADDRESS
   fromName: $EMAIL_SENDER_NAME
@@ -73,28 +59,21 @@ fs:
     url: $S3_IMAGES_URL
 meta:
   __names__:
-    7d923ca0-fc68-4351-98ec-1274de3906db: Accueil # Accueil
-    9b18697d-2ce6-492b-b628-1a649bb22eaa: 'SEO Open Graph Image' # SEO Open Graph Image
-    80e7bc64-a66a-42dd-b8a5-da4e1d3f4f1f: Légende # Légende
-    228f18ac-b71c-4021-8f66-0d34f29a880f: 'SEO global' # SEO global
-    0499bd9f-6aa1-4590-9c16-e86191e0a2b8: Accueil # Accueil
-    00548086-7b2f-44f0-a0e4-c9d91fcaae9e: Images # Images
-    81304912-0d5b-4feb-9926-1e423206864e: Assets # Assets
-    a7870a18-8ec8-42bd-bb94-ea232c8eb066: SEO # SEO
-    b4a35b8a-1eff-4137-817a-17e468158aed: 'Public Schema' # Public Schema
-    c1436119-37a0-4b5b-9538-52c47b611fd2: $SITE_GROUP # $SITE_GROUP
-    ca2a274d-ce21-46a0-81e5-cd4dba43a25a: Documents # Documents
-    d3974314-8390-48bd-af85-f938616558be: 'SEO Description' # SEO Description
-    fc2cb4bb-e016-46f9-a830-653496da88d7: Français # Français
+    2491b9cf-e5fb-4d22-91ac-5ae6bcf8562d: Images # Images
+    8517b590-fce4-474f-b972-a09fb64cd116: Français # Français
+    cce026c1-81f4-4544-b9d1-42b792810a5e: Documents # Documents
+    eae966b9-c034-46cf-8e92-dd12ebfba113: English # English
+    f91e6549-b58b-4a20-afb6-ff84428c0ccc: $SITE_GROUP # $SITE_GROUP
 plugins:
   aws-s3:
     edition: standard
     enabled: true
     schemaVersion: '2.0'
-  redactor:
+  retour:
     edition: standard
-    enabled: true
-    schemaVersion: 2.3.0
+    enabled: false
+    licenseKey: 639TX5GD2A1KQG4QRDDA97JC
+    schemaVersion: 3.0.12
   switcher:
     edition: standard
     enabled: true
@@ -104,5 +83,12 @@ system:
   live: $CRAFT_SYSTEM_STATUS
   name: $CRAFT_SYSTEM_NAME
   retryDuration: null
-  schemaVersion: 4.15.0.0
-  timeZone: America/Toronto
+  schemaVersion: 5.7.0.3
+  timeZone: $CRAFT_SYSTEM_TIMEZONE
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

@@ -1,0 +1,9 @@
+baseUrl: $SITE_URL_EN
+enabled: '1'
+handle: siteEnglish
+hasUrls: true
+language: en-CA
+name: English
+primary: false
+siteGroup: f91e6549-b58b-4a20-afb6-ff84428c0ccc # $SITE_GROUP
+sortOrder: 2
