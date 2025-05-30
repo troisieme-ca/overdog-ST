@@ -1,7 +1,6 @@
-altTranslationKeyFormat: null
-altTranslationMethod: site
+color: null
 fieldLayouts:
-  a3305f71-c091-4eb5-a271-40d781a0bb30:
+  ff36c0f0-9689-407a-a318-aa0b034e55ee:
     tabs:
       -
         elementCondition: null
@@ -11,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-05-27T16:09:50+00:00'
+            dateAdded: '2025-05-28T19:45:05+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -26,47 +25,27 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: ab4865f8-c8b1-4cb5-ab64-3c3670ef1266
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ade72b1e-5f62-4f2e-84c0-6b7db889d294
             userCondition: null
             warning: null
             width: 100
+        name: Content
+        uid: 47ef1fd5-8df6-4e86-8c8e-9c759ae2b4a4
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
-            attribute: alt
-            class: null
-            cols: null
-            dateAdded: '2025-05-28T21:25:26+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            instructions: null
-            label: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: true
-            required: false
-            rows: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: 5a28e61c-535b-4726-87d8-e3dd92cef5d4
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-05-28T21:25:26+00:00'
+            dateAdded: '2025-05-28T21:23:21+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 8f8d814d-a865-4cbc-a6bf-b794b8559607 # Légende
+            fieldUid: f193a844-47c9-4aaa-ad8e-874278f2aa52 # SEO Description
             handle: null
             includeInCards: false
             instructions: null
@@ -75,19 +54,38 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 87156256-f06b-4dfb-aa61-1799ab10106d
+            uid: 5cbbc21f-bfce-4c8e-b00d-452329fa8856
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: ea94e3d3-ad55-400a-a452-7d3c57133aba
+          -
+            dateAdded: '2025-05-28T21:23:21+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e1dd4cca-7af1-45f3-976b-18be012e7aad # SEO Open Graph Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72552275-45d2-4d4e-9de2-9b63b6057526
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 19ef0108-ce7c-405b-8e0d-515657b8ee9a
         userCondition: null
-fs: fileSystemsImages
-handle: volumeImages
-name: Images
-sortOrder: 2
-subpath: ''
+handle: singleHome
+hasTitleField: true
+icon: house
+name: Accueil
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: fileSystemsAssetTransforms
-transformSubpath: images

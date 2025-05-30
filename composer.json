@@ -16,8 +16,8 @@
   "license": "MIT",
   "authors": [
     {
-        "name": "troisième",
-        "homepage": "https://troisieme.ca/"
+      "name": "troisième",
+      "homepage": "https://troisieme.ca/"
     }
   ],
   "type": "project",
@@ -25,6 +25,7 @@
   "prefer-stable": true,
   "require": {
     "craftcms/aws-s3": "^2.2.2",
+    "craftcms/ckeditor": "^4.9.0",
     "craftcms/cms": "^5.0.0",
     "ianreid/switcher": "^1.1",
     "nystudio107/craft-retour": "^5.0.10",
@@ -61,9 +62,14 @@
   },
   "repositories": [
     {
-        "type": "composer",
-        "url": "https://composer.craftcms.com",
-        "canonical": false
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "modules\\tjcustomadminnotices\\": "modules/tjcustomadminnotices/"
+    }
+  }
 }

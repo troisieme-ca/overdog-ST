@@ -1,0 +1,10 @@
+{# PARAMETERS WHEN INCLUDE
+  @param {string} contentName
+  @param {string} content
+#}
+
+<div class="container">
+    <div class="richtext">
+        <p>{{ ('There are no ' ~ contentName|default('posts') ~ ' at the moment.')|t }}</p>
+    </div>
+</div>

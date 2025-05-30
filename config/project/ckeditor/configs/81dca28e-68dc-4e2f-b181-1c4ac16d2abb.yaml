@@ -1,0 +1,19 @@
+headingLevels:
+  - 2
+  - 3
+  - 4
+name: Medium
+toolbar:
+  - undo
+  - redo
+  - heading
+  - blockQuote
+  - bold
+  - italic
+  - bulletedList
+  - numberedList
+  - outdent
+  - indent
+  - superscript
+  - subscript
+  - link

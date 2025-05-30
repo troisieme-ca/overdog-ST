@@ -1,0 +1,10 @@
+headingLevels: false
+name: Light
+toolbar:
+  - bold
+  - italic
+  - bulletedList
+  - numberedList
+  - superscript
+  - subscript
+  - link

@@ -1,0 +1,55 @@
+color: null
+fieldLayouts:
+  5d3e1c8e-4a41-4874-bcb9-fb999acbd856:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-05-28T21:23:00+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f193a844-47c9-4aaa-ad8e-874278f2aa52 # SEO Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0caf9cda-bd39-4865-9a24-30f260f10c1a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-28T21:23:00+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e1dd4cca-7af1-45f3-976b-18be012e7aad # SEO Open Graph Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 054e0267-74fe-477a-bad5-9c6786d1c3eb
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: b3f83ada-9d4c-4bae-9a5e-8c09439faa6d
+        userCondition: null
+handle: singleGlobalSettings
+hasTitleField: false
+icon: gear
+name: 'Paramètres globaux'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: "{{'Global settings'|t}}"
+titleTranslationKeyFormat: null
+titleTranslationMethod: none

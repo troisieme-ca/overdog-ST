@@ -1,0 +1,11 @@
+{#
+    # This serves as a bridge to the folder corresponding to the entry types handle.
+    # The handle in cp must match the folder name.
+    #
+    # The index template in each folder is used by default, particularly for archives.
+    # Only for better classification of templates.
+    #
+    # See https://craftcms.com/guides/entry-type-urls pour plus de détails.
+#}
+
+{{ include(['_sections/structure/pages/' ~ entry.type|kebab ~ '/index.twig', '404'], ignore_missing = true) }}

@@ -28,5 +28,95 @@
 -------------------------------------------------------------------
 #}
 {%- macro phoneLabel(phoneNumber, extension = null) -%}
-   {{ phoneNumber }}{%- if extension -%}{{ ' ext. '|t ~ extension }}{%- endif -%}
+   {{ phoneNumber }}{%- if extension -%}{{ ', ext. '|t ~ extension }}{%- endif -%}
 {%- endmacro -%}
+
+{#
+-------------------------------------------------------------------
+   @name pageLink
+   @param {integer number} entryId
+
+   Link from entry ID
+-------------------------------------------------------------------
+#}
+{% macro pageLink(entryId) %}
+	{% set entry = craft.entries.id(entryId).one() %}
+	{{ entry ? entry.url }}
+{% endmacro %}
+
+{#
+-------------------------------------------------------------------
+   @name pageTitle
+   @param {integer number} entryId
+
+   Page title from entry ID
+-------------------------------------------------------------------
+#}
+{% macro pageTitle(entryId) %}
+   {% set entry = craft.entries.id(entryId).one() %}
+   {{ entry ? entry.title }}
+{% endmacro %}
+
+{#
+-------------------------------------------------------------------
+   @name getDateInterval
+   @param {date} startDate
+   @param {date} endDate
+
+   Create date interval string based on a start date and an end date
+-------------------------------------------------------------------
+#}
+{% macro getDateInterval(startDate, endDate) %}
+    {% if startDate and endDate %}
+        {% if startDate|date is not same as(endDate|date) %}
+            {% if startDate|date('Y') is not same as(endDate|date('Y')) %}
+                {{ 'From'|t }} <time datetime="{{ startDate|date('Y-m-d') }}">{{ startDate|date('F j, Y'|t) }}</time> {{ 'to'|t }} <time datetime="{{ endDate|date('Y-m-d') }}">{{ endDate|date('F j, Y'|t) }}</time>
+            {% else %}
+                {% if startDate|date('m') is not same as(endDate|date('m')) %}
+                    {{ 'From'|t }} <time datetime="{{ startDate|date('Y-m-d') }}">{{ startDate|date('F j'|t) }}</time> {{ 'to'|t }} <time datetime="{{ endDate|date('Y-m-d') }}">{{ endDate|date('F j, Y'|t) }}</time>
+                {% else %}
+                    {% if currentSite.language == 'fr-CA' %}
+                        {{ 'From'|t }} <time datetime="{{ startDate|date('Y-m-d') }}">{{ startDate|date('j') }}</time> {{ 'to'|t }} <time datetime="{{ endDate|date('Y-m-d') }}">{{ endDate|date('j F Y') }}</time>
+                    {% else %}
+                        <time datetime="{{ startDate|date('Y-m-d') }}">{{ startDate|date('F j') }}</time>&ndash;<time datetime="{{ endDate|date('Y-m-d') }}">{{ endDate|date('j, Y') }}</time>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% else %}
+            <time datetime="{{ startDate|date('Y-m-d') }}">{{ startDate|date('F j, Y'|t) }}</time>
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+
+{#
+-------------------------------------------------------------------
+   @name getTimeInterval
+   @param {date} startTime
+   @param {date} endTime
+
+   Create time interval string based on a start time and an end time
+-------------------------------------------------------------------
+#}
+{% macro getTimeInterval(startTime, endTime) %}
+   {% if startTime and endTime %}
+      <time datetime="{{ startTime|date('H:i') }}">{{ startTime|date('G:i'|t) }}</time> - 
+      <time datetime="{{ endTime|date('H:i') }}">{{ endTime|date('G:i'|t) }}</time>
+   {% else %}
+      <time datetime="{{ startTime|date('H:i') }}">{{ startTime|date('G:i'|t) }}</time>
+   {% endif %}
+{% endmacro %}
+
+{#
+-------------------------------------------------------------------
+   @name getEntryId
+   @param {string} key
+
+   Entry ID from key
+-------------------------------------------------------------------
+#}
+{% macro getEntryId(key) %}
+   {% set constantArray = {
+      'PRIVACY_POLICY_ID': 6
+   } %}
+   {{ constantArray ? constantArray[key]|default(null) }}
+{% endmacro %}

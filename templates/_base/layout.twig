@@ -3,6 +3,14 @@
 	<head>
       {# 
       -------------------------------------------------------------------
+         Tracking Codes
+      -------------------------------------------------------------------
+      #}
+		{% if getenv('TRACKING_CODE') == 1 %}
+         {# insert tracking codes here #}
+      {% endif %}
+      {# 
+      -------------------------------------------------------------------
          Preconnect to external ressources
          If you're not utilizing S3 with a CDN, you can safely remove these.
       -------------------------------------------------------------------
@@ -16,10 +24,10 @@
       #}	
       <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="{{ entry.seoDescription|default(globalSeo.seoDescription ?? '') }}">
+		<meta name="description" content="{{ entry.seoDescription|default(singleGlobalSettings.seoDescription ?? '') }}">
       
       {% if getenv('CRAFT_ENVIRONMENT') == "production" %}
-      {# override by setting robotIndex var in your template, ex: for clients portal #}
+      {# Override by setting robotIndex var in your template, ex: for clients portal #}
 		<meta name="robots" content="{{ robotIndex|default('index, follow') }}">
       {% else %}
       <meta name="robots" content="noindex, nofollow" />
@@ -92,9 +100,9 @@
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="{{ craft.app.request.absoluteUrl }}">
 		<meta property="og:title" content="{{ seoTitle }}">
-		<meta property="og:description" content="{{ entry.seoDescription|default(globalSeo.seoDescription ?? '') }}">
+		<meta property="og:description" content="{{ entry.seoDescription|default(singleGlobalSettings.seoDescription ?? '') }}">
 		{# OG Image #}
-		{% set ogImageField = entry.seoOgImage|default(globalSeo.seoOgImage ?? null ) %}
+		{% set ogImageField = entry.seoOgImage|default(singleGlobalSettings.seoOgImage ?? null ) %}
 		{% if ogImageField %}
 			{% set ogImage = ogImageField.one() %}
          {% if ogImage %}
@@ -142,14 +150,6 @@
       -------------------------------------------------------------------
       #}
 		{{ include('_base/footer', ignore_missing = true) }}
-      {# 
-      -------------------------------------------------------------------
-         Tracking Codes
-      -------------------------------------------------------------------
-      #}
-		{% if getenv('TRACKING_CODE') == 1 %}
-         {# insert tracking codes here #}
-      {% endif %}
       {# 
       -------------------------------------------------------------------
          You can include a JSON-LD schema within this block.

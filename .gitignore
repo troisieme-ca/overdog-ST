@@ -2,9 +2,9 @@
 .env
 
 # COMPOSER
-/vendor
-/node_modules/*
-/yarn-error.log
+vendor
+node_modules
+yarn-error.log
 
 # MISC FILES
 .cache

@@ -1,0 +1,26 @@
+columnSuffix: null
+handle: sharedMainMatrix
+instructions: null
+name: 'Contenu modulaire'
+searchable: true
+settings:
+  createButtonLabel: Ajouter
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 0b9b47e2-30bd-4d64-9da3-b105c620af66 # Éditeur de texte
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

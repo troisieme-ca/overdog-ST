@@ -1,0 +1,98 @@
+{# PARAMETERS WHEN INCLUDE
+  @param {variable} pageInfo
+  @param {boolean} showArrows
+#}
+
+{% set neighbours = 2 %}
+{# symbols #}
+{% set prev = '&#10094;' %}
+{% set next = '&#10095;' %}
+{% set dots = '&hellip;' %}
+
+{# MACROS #}
+{# numeric link #}
+{% macro numericLink(url, number, current) %}
+   <li>
+      {% if current %}
+         <span
+            data-number="{{ number }}" 
+            aria-label="{{ 'Current page'|t }}" 
+            aria-current="page"
+        >
+            {{ number }}
+        </span>
+      {% else %}
+         <a
+            href="{{ url }}" 
+            data-number="{{ number }}" 
+            aria-label="{{ 'Go to page'|t ~ ' ' ~ number }}"
+        >
+            {{ number }}
+        </a>
+      {% endif %}
+   </li>
+{% endmacro %}
+
+{# ellipsis #}
+{% macro ellipsis(content) %}
+   <li>
+      <span>{{ content|raw }}</span>
+   </li>
+{% endmacro %}
+
+
+{% if pageInfo is defined and pageInfo.totalPages > 1 %}
+
+{% import _self as self %}
+
+{# LAYOUT #}     
+<nav aria-label="{{ 'Pagination'|t }}">
+   <ul class="flex flex-wrap items-center justify-center gap-4">
+
+      {# previous #}
+      {% if pageInfo.prevUrl %}
+      <li>
+         <a
+            href="{{ pageInfo.prevUrl }}" 
+            data-number="{{ pageInfo.currentPage - 1 }}" 
+            aria-label="{{ 'Previous page'|t }}"
+        >
+            <span class="sr-only">{{ 'Previous'|t }}</span>
+            {{ prev|raw }}
+         </a>
+      </li>
+      {% endif %}
+
+      {# first #}
+      {% if pageInfo.currentPage - neighbours > 1  %}{{ self.numericLink(pageInfo.firstUrl, '1') }}{% endif %}
+      {# ellipsis before current #}
+      {% if pageInfo.currentPage - neighbours > 2 %}{{ self.ellipsis(dots) }}{% endif %}
+      {# links before current #}
+      {% for page, url in pageInfo.getPrevUrls(neighbours) %}{{ self.numericLink(url, page) }}{% endfor %}
+      {# current #}
+      {{ self.numericLink('', pageInfo.currentPage, true) }}
+      {# links after current #}
+      {% for page, url in pageInfo.getNextUrls(neighbours) %}{{ self.numericLink(url, page) }}{% endfor %}
+      {# ellipsis after current #}
+      {% if pageInfo.totalPages - pageInfo.currentPage > neighbours + 1 %}{{ self.ellipsis(dots) }}{% endif %}
+      {# last #}
+      {% if pageInfo.currentPage + neighbours < pageInfo.totalPages %}{{ self.numericLink(pageInfo.lastUrl, pageInfo.totalPages) }}{% endif %}
+
+      {# next #}
+      {% if pageInfo.nextUrl %}
+      <li>
+         <a
+            href="{{ pageInfo.nextUrl }}" 
+            data-number="{{ pageInfo.currentPage + 1 }}" 
+            aria-label="{{ 'Next page'|t }}"
+        >
+            <span class="sr-only">{{ 'Next'|t }}</span>
+            {{ next|raw }}
+         </a>
+      </li>
+      {% endif %}
+
+   </ul>
+</nav>
+
+{% endif %}

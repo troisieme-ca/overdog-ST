@@ -8,10 +8,16 @@
 {% set seoTitle = 'Error 404'|t ~ ' | ' ~ currentSite.group.name %}
 {% set robotIndex = 'noindex, nofollow' %}
 
+{% block header %}{% endblock %}
+
 {% block content %}
 
   <div class="container">
-    <h3>{{ 'This page does not exist! Please use the main menu to go to another page.'|t }}</h3>
+    <h1>{{ 'An error has occurred…'|t }}</h1>
+
+    <p>{{ 'This page does not exist! Please use the main menu to go to another page.'|t }}</p>
+
+    <a href="{{ siteUrl }}">{{ 'Back to homepage'|t }}</a>
   </div>
 
 {% endblock %}
