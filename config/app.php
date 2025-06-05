@@ -21,12 +21,14 @@
  */
 
 use craft\helpers\App;
+use modules\tjckeditorcurcustomizations\TjCkeditorCustomizations;
 use modules\tjcustomadminnotices\TjCustomAdminNotices;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS', 
     'modules' => [
-        'tjcustomadminnotices' => TjCustomAdminNotices::class
+        'tjcustomadminnotices' => TjCustomAdminNotices::class,
+        'tjckeditorcustomizations' => TjCkeditorCustomizations::class
     ],
-    'bootstrap' => ['tjcustomadminnotices'],
+    'bootstrap' => ['tjcustomadminnotices', 'tjckeditorcustomizations'],
 ];

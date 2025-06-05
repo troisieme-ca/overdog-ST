@@ -69,7 +69,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "modules\\tjcustomadminnotices\\": "modules/tjcustomadminnotices/"
+      "modules\\tjcustomadminnotices\\": "modules/tjcustomadminnotices/",
+      "modules\\tjckeditorcurcustomizations\\": "modules/tjckeditorcustomizations/src/"
     }
   }
 }

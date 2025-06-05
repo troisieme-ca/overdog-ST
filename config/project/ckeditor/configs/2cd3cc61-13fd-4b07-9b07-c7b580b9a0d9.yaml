@@ -1,5 +1,15 @@
 headingLevels: false
 name: Light
+options:
+  link:
+    decorators:
+      openInNewTab:
+        attributes:
+          rel: 'noopener noreferrer'
+          target: _blank
+        defaultValue: false
+        label: 'Open in a new tab'
+        mode: manual
 toolbar:
   - bold
   - italic
@@ -8,3 +18,5 @@ toolbar:
   - superscript
   - subscript
   - link
+  - specialCharacters
+  - nbsp

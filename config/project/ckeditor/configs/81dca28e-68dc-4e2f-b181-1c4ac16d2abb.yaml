@@ -3,6 +3,16 @@ headingLevels:
   - 3
   - 4
 name: Medium
+options:
+  link:
+    decorators:
+      openInNewTab:
+        attributes:
+          rel: 'noopener noreferrer'
+          target: _blank
+        defaultValue: false
+        label: 'Open in a new tab'
+        mode: manual
 toolbar:
   - undo
   - redo
@@ -17,3 +27,5 @@ toolbar:
   - superscript
   - subscript
   - link
+  - specialCharacters
+  - nbsp
