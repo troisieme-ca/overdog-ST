@@ -1,0 +1,38 @@
+color: null
+fieldLayouts:
+  8d9329e9-b4b8-4dfb-a74c-9f467bd49370:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-06-17T20:05:59+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 03cdaa7c-0cf4-40ac-a94e-c32254ead251 # Appel à l’action
+            handle: ctaEntry
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a95398b-0964-4ff5-a162-f0df2f531fb1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 735ca8d1-bcb5-49fa-bf98-994100098f6c
+        userCondition: null
+handle: blockCta
+hasTitleField: false
+icon: null
+name: 'Appel à l’action'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: none

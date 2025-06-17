@@ -9,10 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Updated
 
-- Update Craft CMS version 4.15.4 to 5.7.7
+- Update Craft CMS version 4.15.4 to 5.7.10
+- Update Plugins
 - Add Ckeditor 5 default configs
 - Add module Tj Custom Admin Notices
 - Add module Tj Ckeditor Customizations
+- Add fields
+- Add Privacy policy single
+- Add Terms of use single
 
 ## [1.6.2.1] - 2025-05-20
 

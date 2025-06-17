@@ -1,0 +1,45 @@
+columnSuffix: null
+handle: galleryType
+instructions: null
+name: 'Type de galerie'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Mosaïque
+        -
+          - value
+          - mosaic
+        -
+          - icon
+          - objects-column
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Carrousel
+        -
+          - value
+          - carousel
+        -
+          - icon
+          - gallery-thumbnails
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

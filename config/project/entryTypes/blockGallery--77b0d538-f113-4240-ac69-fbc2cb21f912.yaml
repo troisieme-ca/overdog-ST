@@ -1,16 +1,33 @@
 color: null
 fieldLayouts:
-  ff36c0f0-9689-407a-a318-aa0b034e55ee:
+  bec4391d-765e-416c-a8a4-e61ceac4e7aa:
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-06-17T20:42:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 3899b44a-d395-4e5a-9dc2-dca6ac79bd58 # Type de galerie
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ac19fbc7-c245-40c3-b6b8-a64f2aca2c27
+            userCondition: null
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-05-28T19:45:05+00:00'
+            dateAdded: '2025-06-17T20:26:28+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -25,64 +42,41 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            required: true
+            required: false
             size: null
             step: null
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: ade72b1e-5f62-4f2e-84c0-6b7db889d294
+            uid: 338a0cfd-d28c-48df-af36-e552a8f2df81
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-06-17T20:42:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: a61e898b-80d6-44b1-9f22-2f51b72df97e # Images
+            handle: galleryImages
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d7f915ea-db65-43dd-a282-6f6a601090dd
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 47ef1fd5-8df6-4e86-8c8e-9c759ae2b4a4
+        uid: 52e1bba2-4869-4e4a-ba43-d9122a333832
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2025-05-28T21:23:21+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: f193a844-47c9-4aaa-ad8e-874278f2aa52 # SEO Description
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5cbbc21f-bfce-4c8e-b00d-452329fa8856
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-05-28T21:23:21+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: e1dd4cca-7af1-45f3-976b-18be012e7aad # SEO Open Graph Image
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 72552275-45d2-4d4e-9de2-9b63b6057526
-            userCondition: null
-            warning: null
-            width: 100
-        name: SEO
-        uid: 19ef0108-ce7c-405b-8e0d-515657b8ee9a
-        userCondition: null
-handle: singleHome
+handle: blockGallery
 hasTitleField: true
-icon: house
-name: Accueil
-showSlugField: true
+icon: gallery-thumbnails
+name: Galerie
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

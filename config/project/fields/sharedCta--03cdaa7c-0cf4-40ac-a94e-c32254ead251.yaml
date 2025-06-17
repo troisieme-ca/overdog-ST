@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: sharedCta
+instructions: null
+name: 'Appel à l’action'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Ajouter un appel à l’action'
+  showCardsInGrid: false
+  showSiteMenu: false
+  showUnpermittedEntries: false
+  showUnpermittedSections: false
+  sources:
+    - 'section:d9fa5a1b-6652-4d0f-80eb-02c76dee0a7e' # Appel à l’action
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

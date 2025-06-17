@@ -4,7 +4,7 @@ instructions: null
 name: 'Contenu modulaire'
 searchable: true
 settings:
-  createButtonLabel: Ajouter
+  createButtonLabel: 'Ajouter un module'
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
@@ -12,15 +12,40 @@ settings:
       __assoc__:
         -
           - uid
+          - c4db2f5c-fb9f-4eb1-922f-270375ec9ed4 # Appel à l’action
+    -
+      __assoc__:
+        -
+          - uid
           - 0b9b47e2-30bd-4d64-9da3-b105c620af66 # Éditeur de texte
+    -
+      __assoc__:
+        -
+          - uid
+          - 6561ac41-8324-4d9f-b051-022b2d6f3090 # Texte et image
+    -
+      __assoc__:
+        -
+          - uid
+          - 77b0d538-f113-4240-ac69-fbc2cb21f912 # Galerie
+    -
+      __assoc__:
+        -
+          - uid
+          - 15658874-c139-4bd8-8ddd-a3b817dcdccc # Documents et liens
+    -
+      __assoc__:
+        -
+          - uid
+          - b37ed90e-4778-4fba-983c-67ba849922bf # Vidéo
   includeTableView: false
   maxEntries: null
   minEntries: null
-  pageSize: 50
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
   showCardsInGrid: false
-  viewMode: cards
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

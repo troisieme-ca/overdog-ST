@@ -30,7 +30,7 @@
       {# Override by setting robotIndex var in your template, ex: for clients portal #}
 		<meta name="robots" content="{{ robotIndex|default('index, follow') }}">
       {% else %}
-      <meta name="robots" content="noindex, nofollow" />
+      <meta name="robots" content="noindex, nofollow">
       {% endif %}
       
       <meta name="mobile-web-app-capable" content="yes">
@@ -46,7 +46,7 @@
       {% if seoTitle is not defined %}
          {% set seoTitle = entry is defined ? entry.title ~ ' | ' ~ currentSite.group.name : currentSite.group.name %}
       {% endif %}
-      <title>{{ seoTitle }}</title>		
+      <title>{{ seoTitle }}</title>
       {# 
       -------------------------------------------------------------------
          Languages / Sites
@@ -57,6 +57,12 @@
       -------------------------------------------------------------------
       #}	
       {% set availableSites = getSwitcherSites(switcherCustomSource|default(entry ?? null)) %}
+
+      {% if availableSites|length %}
+         {% for item in availableSites %}
+            <link rel="alternate" href="{{ url(item.url) }}" hreflang="{{ item.site.language }}">
+         {% endfor %}
+      {% endif %}
       {# 
       -------------------------------------------------------------------
          Favicon

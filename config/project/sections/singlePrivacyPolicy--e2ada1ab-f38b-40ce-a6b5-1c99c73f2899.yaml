@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: aaf49334-7ca1-448e-850b-ab60cbbcd986 # Pages par défaut
+handle: singlePrivacyPolicy
+maxAuthors: 1
+name: 'Politique de confidentialité'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  8517b590-fce4-474f-b972-a09fb64cd116: # Français
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/single/privacy-policy/index
+    uriFormat: politique-de-confidentialite
+  eae966b9-c034-46cf-8e92-dd12ebfba113: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/single/privacy-policy/index
+    uriFormat: privacy-policy
+type: single

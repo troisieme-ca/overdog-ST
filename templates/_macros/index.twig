@@ -116,7 +116,8 @@
 #}
 {% macro getEntryId(key) %}
    {% set constantArray = {
-      'PRIVACY_POLICY_ID': 6
+      'PRIVACY_POLICY_ID': 17,
+      'TERMS_OF_USE_ID': 18,
    } %}
    {{ constantArray ? constantArray[key]|default(null) }}
 {% endmacro %}

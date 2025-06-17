@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: sharedLightswitch
+instructions: null
+name: Interrupteur
+searchable: false
+settings:
+  default: false
+  offLabel: Non
+  onLabel: Oui
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -1,0 +1,10 @@
+columnSuffix: null
+handle: sharedEmail
+instructions: null
+name: Courriel
+searchable: false
+settings:
+  placeholder: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

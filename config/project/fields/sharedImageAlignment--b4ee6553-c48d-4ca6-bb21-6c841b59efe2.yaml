@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: sharedImageAlignment
+instructions: null
+name: 'Positionnement de l’image'
+searchable: false
+settings:
+  default: false
+  offLabel: Gauche
+  onLabel: Droite
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

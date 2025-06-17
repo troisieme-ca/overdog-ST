@@ -1,33 +1,16 @@
 color: null
 fieldLayouts:
-  a51720e3-b723-4146-8c70-ae92166b05b1:
+  ebab32af-963b-4677-9318-eda2779b8fda:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-06-17T20:16:25+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 99ff4ecb-263e-465c-885f-78119bc0d93d # Texte
-            handle: sectionTitle
-            includeInCards: false
-            instructions: null
-            label: 'Titre de section'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bfbfeffc-5436-4770-891a-49b70685db32
-            userCondition: null
-            warning: null
-            width: 100
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-06-17T20:35:24+00:00'
+            dateAdded: '2025-06-17T20:37:27+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -48,16 +31,16 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: f6cd2345-54c9-4d62-aaa5-f75a917d18f6
+            uid: 3fda0030-420c-4c1b-a703-98db3b8c8b2f
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-05-30T17:23:33+00:00'
+            dateAdded: '2025-06-17T20:27:13+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 14cd5d53-35a9-4b02-a1e4-5ff467c3fa53 # Texte
-            handle: textEditor
+            fieldUid: c65be2cf-aeb9-4056-b998-39b6312f91a1 # Texte
+            handle: textImageEditor
             includeInCards: false
             instructions: null
             label: Éditeur
@@ -65,51 +48,68 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d5a0126b-7fe5-4c91-80cf-05cd46c485bf
+            uid: e86bf72c-6a52-40d8-b03b-4c8d5e78f141
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-06-17T20:16:25+00:00'
+            dateAdded: '2025-06-17T20:27:13+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 534c9d95-8207-4e82-b9cb-33c96b54eda9 # Interrupteur
-            handle: isAccordion
+            fieldUid: 14cc298d-f39c-448c-8dbb-1c4a52ec18db # Link
+            handle: textImageLink
             includeInCards: false
             instructions: null
-            label: 'Transformer en accordéon'
+            label: Bouton
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b9836b89-5f50-4cae-baed-71d78a5bc21f
+            uid: b068fdd1-097e-4974-9204-30dde7216b70
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
-            dateAdded: '2025-06-17T20:16:25+00:00'
+            dateAdded: '2025-06-17T20:27:13+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 534c9d95-8207-4e82-b9cb-33c96b54eda9 # Interrupteur
-            handle: noBottomMargin
+            fieldUid: d529af64-31d5-47b9-a37f-5218bab2e1f5 # Image
+            handle: textImagePicture
             includeInCards: false
             instructions: null
-            label: 'Enlever la marge sous le bloc'
+            label: Photo
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c8470f0f-a0b0-45dd-9cfc-bd15402eb616
+            uid: dc2d482b-4874-4c86-a823-2c769173db87
             userCondition: null
             warning: null
-            width: 50
+            width: 100
+          -
+            dateAdded: '2025-06-17T20:27:13+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b4ee6553-c48d-4ca6-bb21-6c841b59efe2 # Positionnement de l’image
+            handle: textImageAlignment
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf5f5e93-b066-4fe7-8b21-90cac5ae4124
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
-        uid: a033b3d6-c4ee-4fe5-a575-234f77321df7
+        uid: 4e24bbdb-588b-476d-a152-f693f3f21492
         userCondition: null
-handle: blockText
+handle: blockTextImage
 hasTitleField: true
 icon: null
-name: 'Éditeur de texte'
+name: 'Texte et image'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

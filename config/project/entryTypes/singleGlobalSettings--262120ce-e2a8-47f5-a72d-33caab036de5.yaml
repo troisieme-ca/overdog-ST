@@ -6,6 +6,29 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-06-17T19:43:57+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d8889692-0498-4123-b82b-ec0be6c299db # Médias sociaux
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1ac10ed-d17c-4145-ac99-b2dc92694ee9
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Médias sociaux'
+        uid: c67ebe6d-2fd4-46ed-8679-36becda72a8e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2025-05-28T21:23:00+00:00'
             editCondition: null
             elementCondition: null
@@ -39,7 +62,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: SEO
+        name: 'SEO global'
         uid: b3f83ada-9d4c-4bae-9a5e-8c09439faa6d
         userCondition: null
 handle: singleGlobalSettings
@@ -47,9 +70,9 @@ hasTitleField: false
 icon: gear
 name: 'Paramètres globaux'
 showSlugField: false
-showStatusField: true
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 titleFormat: "{{'Global settings'|t}}"
 titleTranslationKeyFormat: null
-titleTranslationMethod: none
+titleTranslationMethod: site

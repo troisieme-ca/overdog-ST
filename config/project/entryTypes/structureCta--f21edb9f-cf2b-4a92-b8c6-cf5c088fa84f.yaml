@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  ff36c0f0-9689-407a-a318-aa0b034e55ee:
+  0cd96bdf-9d28-48bb-bdd5-4d0b9e929c20:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-05-28T19:45:05+00:00'
+            dateAdded: '2025-06-17T19:13:18+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,58 +31,52 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: ade72b1e-5f62-4f2e-84c0-6b7db889d294
+            uid: babba11c-82ae-458e-a230-9a5a4c5fb6f1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-06-17T19:16:56+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 1e13e9d6-7ea5-47b0-9e9f-6d806576c40d # Texte
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57ca3072-d2fd-47e0-82b0-3dcb347e7556
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-06-17T19:16:56+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 14cc298d-f39c-448c-8dbb-1c4a52ec18db # Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Bouton
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 95151f39-c3fd-4fa7-9c74-5592edf89a0a
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 47ef1fd5-8df6-4e86-8c8e-9c759ae2b4a4
+        uid: cea20499-278c-48b5-8497-05a87a15fa84
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2025-05-28T21:23:21+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: f193a844-47c9-4aaa-ad8e-874278f2aa52 # SEO Description
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5cbbc21f-bfce-4c8e-b00d-452329fa8856
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-05-28T21:23:21+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: e1dd4cca-7af1-45f3-976b-18be012e7aad # SEO Open Graph Image
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 72552275-45d2-4d4e-9de2-9b63b6057526
-            userCondition: null
-            warning: null
-            width: 100
-        name: SEO
-        uid: 19ef0108-ce7c-405b-8e0d-515657b8ee9a
-        userCondition: null
-handle: singleHome
+handle: structureCta
 hasTitleField: true
-icon: house
-name: Accueil
-showSlugField: true
+icon: null
+name: 'Appel à l’action'
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

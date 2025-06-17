@@ -1,4 +1,4 @@
-dateModified: 1749093605
+dateModified: 1750195059
 elementSources:
   craft\elements\Entry:
     -
@@ -14,6 +14,9 @@ elementSources:
         - link
       type: native
     -
+      heading: Pages
+      type: heading
+    -
       defaultSort:
         - title
         - asc
@@ -25,9 +28,6 @@ elementSources:
         - link
       type: native
     -
-      heading: Structures
-      type: heading
-    -
       defaultSort:
         - structure
         - asc
@@ -37,6 +37,19 @@ elementSources:
       tableAttributes:
         - status
         - link
+      type: native
+    -
+      heading: Entrées
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:d9fa5a1b-6652-4d0f-80eb-02c76dee0a7e' # Appel à l’action
+      tableAttributes:
+        - status
       type: native
 email:
   fromEmail: $EMAIL_SYSTEM_ADDRESS
@@ -102,25 +115,52 @@ meta:
     0e249ad1-b8eb-46f3-9896-4df70db56f5c: Texte # Texte
     1e13e9d6-7ea5-47b0-9e9f-6d806576c40d: Texte # Texte
     2cd3cc61-13fd-4b07-9b07-c7b580b9a0d9: Light # Light
+    03cdaa7c-0cf4-40ac-a94e-c32254ead251: 'Appel à l’action' # Appel à l’action
     4c99c7d0-f4eb-4f11-b245-1313b3e605ba: Accueil # Accueil
+    7db422f4-6a9a-4d55-99cd-543fef7be44e: Téléphone # Téléphone
     8c4da01d-7692-4a1a-91b8-b5dc7f795639: Pages # Pages
+    8c8c579e-beb5-4172-aa63-8f74b63a6ff1: Courriel # Courriel
     8f8d814d-a865-4cbc-a6bf-b794b8559607: Légende # Légende
+    14cc298d-f39c-448c-8dbb-1c4a52ec18db: Link # Link
     14cd5d53-35a9-4b02-a1e4-5ff467c3fa53: Texte # Texte
+    66c9ccc5-e6eb-4406-a56d-3b94e35cd2c3: Date # Date
+    77b0d538-f113-4240-ac69-fbc2cb21f912: Galerie # Galerie
     81dca28e-68dc-4e2f-b181-1c4ac16d2abb: Medium # Medium
     99ff4ecb-263e-465c-885f-78119bc0d93d: Texte # Texte
+    498ba9f8-9fae-4a65-b67d-9a8251c3abc9: Texte # Texte
+    534c9d95-8207-4e82-b9cb-33c96b54eda9: Interrupteur # Interrupteur
     956fcbc2-d256-440a-bd1a-b83565364d14: 'Paramètres globaux' # Paramètres globaux
     2491b9cf-e5fb-4d22-91ac-5ae6bcf8562d: Images # Images
+    3899b44a-d395-4e5a-9dc2-dca6ac79bd58: 'Type de galerie' # Type de galerie
     6202f1ea-8290-45ad-a9ea-05e7a8b5ea3e: Full # Full
+    6561ac41-8324-4d9f-b051-022b2d6f3090: 'Texte et image' # Texte et image
     8517b590-fce4-474f-b972-a09fb64cd116: Français # Français
+    8541bb12-4c3c-4ced-b9da-6b6fa238b9b0: Heure # Heure
+    85126b0f-2b2a-45d7-b83b-54eb3a65d2e1: 'Conditions d’utilisation' # Conditions d’utilisation
     262120ce-e2a8-47f5-a72d-33caab036de5: 'Paramètres globaux' # Paramètres globaux
+    15658874-c139-4bd8-8ddd-a3b817dcdccc: 'Documents et liens' # Documents et liens
+    a61e898b-80d6-44b1-9f22-2f51b72df97e: Images # Images
+    a466b70c-6e68-4ab7-b6ab-e51c8e170bef: Source # Source
     aaf49334-7ca1-448e-850b-ab60cbbcd986: 'Pages par défaut' # Pages par défaut
+    b4ee6553-c48d-4ca6-bb21-6c841b59efe2: 'Positionnement de l’image' # Positionnement de l’image
+    b37ed90e-4778-4fba-983c-67ba849922bf: Vidéo # Vidéo
+    b89fdecb-83bc-41bb-8331-c442f9ec9281: Documents # Documents
     ba5f6d4f-75bf-453d-9b0d-76017e4e4dee: 'Contenu modulaire' # Contenu modulaire
+    c4db2f5c-fb9f-4eb1-922f-270375ec9ed4: 'Appel à l’action' # Appel à l’action
+    c5dffd0a-1b4d-4abf-ad50-c955d78e997e: 'Lien externe' # Lien externe
     c65be2cf-aeb9-4056-b998-39b6312f91a1: Texte # Texte
     cce026c1-81f4-4544-b9d1-42b792810a5e: Documents # Documents
+    cd312fa6-b8b3-47b4-8f03-7a6c47772c05: Bannière # Bannière
+    ced25593-9a15-4f62-944f-75a5e88cf204: Liens # Liens
+    d9fa5a1b-6652-4d0f-80eb-02c76dee0a7e: 'Appel à l’action' # Appel à l’action
     d59e41c4-22c4-4111-b96d-5a088bdb66d2: Accueil # Accueil
+    d529af64-31d5-47b9-a37f-5218bab2e1f5: Image # Image
+    d8889692-0498-4123-b82b-ec0be6c299db: 'Médias sociaux' # Médias sociaux
     df41c4cb-d63a-4ac7-89a6-3f7a6f8d0483: Extra-light # Extra-light
     e1dd4cca-7af1-45f3-976b-18be012e7aad: 'SEO Open Graph Image' # SEO Open Graph Image
+    e2ada1ab-f38b-40ce-a6b5-1c99c73f2899: 'Politique de confidentialité' # Politique de confidentialité
     eae966b9-c034-46cf-8e92-dd12ebfba113: English # English
+    f21edb9f-cf2b-4a92-b8c6-cf5c088fa84f: 'Appel à l’action' # Appel à l’action
     f91e6549-b58b-4a20-afb6-ff84428c0ccc: $SITE_GROUP # $SITE_GROUP
     f193a844-47c9-4aaa-ad8e-874278f2aa52: 'SEO Description' # SEO Description
 plugins:

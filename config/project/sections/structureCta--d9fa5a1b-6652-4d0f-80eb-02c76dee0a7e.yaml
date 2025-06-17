@@ -1,0 +1,36 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: f21edb9f-cf2b-4a92-b8c6-cf5c088fa84f # Appel à l’action
+handle: structureCta
+maxAuthors: 1
+name: 'Appel à l’action'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  8517b590-fce4-474f-b972-a09fb64cd116: # Français
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  eae966b9-c034-46cf-8e92-dd12ebfba113: # English
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: fa451a82-2c10-45c5-a7af-4cf55d7ba911
+type: structure
