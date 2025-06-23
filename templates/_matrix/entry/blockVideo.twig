@@ -1,0 +1,5 @@
+{{ include('_shared/components/video', {
+    videoTitle: entry.title,
+    videoSource: entry.videoSource,
+    videoId: entry.videoId
+}, with_context = false, ignore_missing = true) }}

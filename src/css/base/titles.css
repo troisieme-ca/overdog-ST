@@ -1,0 +1,25 @@
+@layer base {
+    .title-01 {
+        @apply fluid-text-48px font-title font-bold;
+    }
+
+    .title-02 {
+        @apply font-title font-bold;
+    }
+
+    .title-03 {
+        @apply font-title font-bold;
+    }
+
+    .title-04 {
+        @apply font-title font-bold;
+    }
+
+    .title-05 {
+        @apply font-title font-bold;
+    }
+
+    .title-06 {
+        @apply font-title font-bold;
+    }
+}

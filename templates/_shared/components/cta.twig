@@ -1,0 +1,28 @@
+{# PARAMETERS WHEN INCLUDE
+   @param {object} cta
+#}
+
+{% if cta %}
+    {% set text = cta.sharedExtraLightText %}
+    {% set button = cta.sharedLink %}
+
+    <div class="bg-transparent mb-full">
+        <div class="container">
+            <h2>{{ cta.title }}</h2>
+
+            {% if text %}
+            <div class="richtext">{{ text }}</div>
+            {% endif %}
+
+            {% if button %}
+            <div class="mt-8">
+                {{ include('_shared/atoms/button', {
+                    label: button.label,
+                    value: button.value,
+                    target: button.target
+                }, with_context = false, ignore_missing = true) }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}

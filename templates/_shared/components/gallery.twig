@@ -1,0 +1,178 @@
+{# PARAMETERS WHEN INCLUDE
+    @param {string} type
+    @param {string} title
+    @param {object} images
+#}
+
+{% if images|length %}
+<div class="bg-transparent mb-full overflow-hidden">
+    <div class="container">
+        <h2 class="{{ title ? 'mb-12' : 'sr-only' }}">{{ title|default('In pictures'|t) }}</h2>
+
+        {% if type == 'carousel' %}
+            <div>
+                <div class="swiper !overflow-visible" data-swiper-name="gallery">
+                    <div class="swiper-wrapper">
+                        {% for image in images %}
+                        <div class="swiper-slide-gallery shrink-0">
+                            <div class="lazy-fill aspect-3/2 overflow-hidden">
+                                {{ include("_shared/atoms/image", {
+                                    image: image,
+                                    sizes: [
+                                        {
+                                            breakpoint: 0,
+                                            width: 90,
+                                        },
+                                        {
+                                            breakpoint: 768,
+                                            width: 45,
+                                        },
+                                        {
+                                            breakpoint: 1024,
+                                            width: 30,
+                                        }
+                                    ]
+                                }, with_context = false, ignore_missing = true) }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                    
+                    {{ include("_shared/atoms/carousel-nav", {
+                        prefix: 'gallery-',
+                        variant: 'filled-blue'
+                    }, with_context = false, ignore_missing = true) }}
+                </div>
+            </div>
+        {% else %}
+            {# Default is mosaic gallery #}
+            {% switch images|length %}
+                {% case 1 %}
+                <div class="lazy-fill aspect-3/2 md:aspect-16/9 overflow-hidden">
+                    {{ include("_shared/atoms/image", {
+                        image: images.one(),
+                        sizes: [
+                            {
+                                breakpoint: 0,
+                                width: 90,
+                            }
+                        ],
+                        caption: true
+                    }, with_context = false, ignore_missing = true) }}
+                </div>
+                
+                {% case 2 %}
+                <div class="grid md:grid-cols-2 gap-6">
+                    {% for image in images %}
+                        <div class="lazy-fill aspect-3/2 overflow-hidden">
+                            {{ include("_shared/atoms/image", {
+                                image: image,
+                                sizes: [
+                                    {
+                                        breakpoint: 0,
+                                        width: 90,
+                                    },
+                                    {
+                                        breakpoint: 768,
+                                        width: 45,
+                                    }
+                                ],
+                                caption: true
+                            }, with_context = false, ignore_missing = true) }}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {% case 3 %}
+                <div class="grid md:grid-cols-3 gap-6 md:grid-rows-2">
+                    {% for image in images %}
+                        {% set classes = loop.index is same as(1) ? "md:col-span-2 md:row-span-2 aspect-3/2 md:aspect-auto md:h-full" : "md:col-span-1 md:row-span-1 aspect-3/2 md:aspect-16/9" %}
+            
+                        <div class="lazy-fill {{ classes }} overflow-hidden">
+                            {% if loop.index is same as(1) %}
+                                {{ include("_shared/atoms/image", {
+                                    image: image,
+                                    sizes: [
+                                        {
+                                            breakpoint: 0,
+                                            width: 90,
+                                        },
+                                        {
+                                            breakpoint: 768,
+                                            width: 60,
+                                        }
+                                    ],
+                                    caption: true
+                                }, with_context = false, ignore_missing = true) }}
+                            {% else %}
+                                {{ include("_shared/atoms/image", {
+                                    image: image,
+                                    sizes: [
+                                        {
+                                            breakpoint: 0,
+                                            width: 90,
+                                        },
+                                        {
+                                            breakpoint: 768,
+                                            width: 30,
+                                        }
+                                    ],
+                                    caption: true
+                                }, with_context = false, ignore_missing = true) }}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {% case 4 %}
+                <div class="grid md:grid-cols-2 gap-6">
+                    {% for image in images %}
+                        <div class="lazy-fill aspect-3/2 overflow-hidden">
+                            {{ include("_shared/atoms/image", {
+                                image: image,
+                                sizes: [
+                                    {
+                                        breakpoint: 0,
+                                        width: 90,
+                                    },
+                                    {
+                                        breakpoint: 768,
+                                        width: 45,
+                                    }
+                                ],
+                                caption: true
+                            }, with_context = false, ignore_missing = true) }}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {% default %}
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    {% for image in images %}
+                        <div class="{{ loop.index0 % 7 == 0 ? 'col-span-2 md:row-span-2' }}">
+                            <div class="lazy-fill {{ loop.index0 % 7 == 0 ? 'aspect-3/2 md:aspect-auto md:h-full' : 'aspect-3/2' }} overflow-hidden">
+                                {{ include("_shared/atoms/image", {
+                                    image: image,
+                                    sizes: [
+                                        {
+                                            breakpoint: 0,
+                                            width: 90,
+                                        },
+                                        {
+                                            breakpoint: 768,
+                                            width: 60,
+                                        }
+                                    ],
+                                    caption: true,
+                                    class: loop.index0 % 7 == 0 ? 'h-full'
+                                }, with_context = false, ignore_missing = true) }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            {% endswitch %}
+        {% endif %}
+    </div>
+</div>
+{% endif %}

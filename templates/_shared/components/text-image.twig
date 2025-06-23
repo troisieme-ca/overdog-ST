@@ -1,0 +1,65 @@
+{# PARAMETERS WHEN INCLUDE
+    @param {string} sectionTitle
+    @param {bool} hasSectionTitle
+    @param {string} title
+    @param {string} text
+    @param {object} button
+    @param {object} image
+    @param {bool} alignment
+#}
+
+{% set sectionTitle = sectionTitle|default(null) %}
+{% set hasSectionTitle = hasSectionTitle|default(null) %}
+{% set alignment = alignment|default(false) %}
+
+{% set headingLevel = sectionTitle or hasSectionTitle ? 'h3' : 'h2' %}
+
+{% if text %}
+<div class="bg-transparent mb-full">
+    <div class="container">
+        {% if sectionTitle %}
+        <h2>{{ sectionTitle }}</h2>
+        {% endif %}
+
+        <div class="{{ image ? 'grid md:grid-cols-2 gap-half items-center' }}">
+            {% if image %}
+            <div class="{{ alignment ? 'md:order-last' }}">
+                <div class="lazy-fill aspect-4/3">
+                    {{ include("_shared/atoms/image", {
+                        image: image,
+                        sizes: [
+                            {
+                                breakpoint: 0,
+                                width: 90,
+                            },
+                            {
+                                breakpoint: 768,
+                                width: 45,
+                            }
+                        ]
+                    }, with_context = false, ignore_missing = true) }}
+                </div>
+            </div>
+            {% endif %}
+
+            <div>
+                {% if title %}
+                <{{ headingLevel }}>{{ title }}</{{ headingLevel }}>
+                {% endif %}
+
+                <div class="richtext">{{ text }}</div>
+
+                {% if button %}
+                <div class="mt-8">
+                    {{ include('_shared/atoms/button', {
+                        label: button.label,
+                        value: button.value,
+                        target: button.target
+                    }, with_context = false, ignore_missing = true) }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

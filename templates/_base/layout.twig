@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ currentSite.language }}">
+<html 
+   xmlns="http://www.w3.org/1999/xhtml" 
+   lang="{{ currentSite.language }}"
+   class="scroll-smooth scroll-pt-28"
+>
 	<head>
       {# 
       -------------------------------------------------------------------
@@ -9,6 +13,7 @@
 		{% if getenv('TRACKING_CODE') == 1 %}
          {# insert tracking codes here #}
       {% endif %}
+      
       {# 
       -------------------------------------------------------------------
          Preconnect to external ressources
@@ -17,6 +22,7 @@
       #}	
 		<link rel="preconnect" href="{{ alias('@imagesUrl') }}" crossorigin>
 		<link rel="preconnect" href="{{ alias('@docsUrl') }}" crossorigin>
+      
       {# 
       -------------------------------------------------------------------
          Meta
@@ -36,17 +42,20 @@
       <meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+      
       {# 
       -------------------------------------------------------------------
          Page Title
          You have the option to customize it individually for each template 
-         using the "seoTitle" variable.
+         using the "seoTitle" variable. If using the fields seoTitle this
+         section will need to be customized.
       -------------------------------------------------------------------
       #}	
       {% if seoTitle is not defined %}
          {% set seoTitle = entry is defined ? entry.title ~ ' | ' ~ currentSite.group.name : currentSite.group.name %}
       {% endif %}
       <title>{{ seoTitle }}</title>
+      
       {# 
       -------------------------------------------------------------------
          Languages / Sites
@@ -63,12 +72,14 @@
             <link rel="alternate" href="{{ url(item.url) }}" hreflang="{{ item.site.language }}">
          {% endfor %}
       {% endif %}
+      
       {# 
       -------------------------------------------------------------------
          Favicon
       -------------------------------------------------------------------
       #}	
 		<link rel="shortcut icon" href="{{ alias('@rootUrl') }}/img/favicon.png">
+      
       {# 
       -------------------------------------------------------------------
          Font declaration - Only applicable when using local fonts.
@@ -78,6 +89,7 @@
       -------------------------------------------------------------------
       #}	
       {{ include('_abstracts/font-face.twig', ignore_missing = true) }}
+      
       {# 
       -------------------------------------------------------------------
          Critical CSS, CSS and JavaScript
@@ -90,6 +102,7 @@
          {{ include('_abstracts/style.twig', ignore_missing = true) }}
       {% endif %}
       {{ include('_abstracts/script.twig', ignore_missing = true) }}
+      
       {# 
       -------------------------------------------------------------------
          Meta Open-Graph Properties
@@ -119,28 +132,48 @@
          {% endif %}
 		{% endif %}
 	</head>
+   
    {# 
    -------------------------------------------------------------------
       Body and Main Layout Structure
    -------------------------------------------------------------------
    #}		
-	<body>
+	<body class="body-nav-open-1:overflow-hidden">
+      {# 
+      -------------------------------------------------------------------
+         Tracking Codes
+      -------------------------------------------------------------------
+      #}
+		{% if getenv('TRACKING_CODE') == 1 %}
+         {# insert tracking codes here #}
+      {% endif %}
+      
+      {# 
+      -------------------------------------------------------------------
+         Skip to main content
+      -------------------------------------------------------------------
+      #}
 		<a class="sr-only focus:static focus:w-auto focus:h-auto" href="#main">{{ 'Skip to main content'|t }}</a>
+      
       {# 
       -------------------------------------------------------------------
          Navbar
       -------------------------------------------------------------------
       #}		
       {{ include('_navigation/navbar', ignore_missing = true) }}
+      
       {# 
       -------------------------------------------------------------------
          Block Header
          You can override this on a per-template basis using the block tag.
       -------------------------------------------------------------------
       #}
-      {% block header %}
-         {{ include('_base/header', ignore_missing = true) }}
-      {% endblock %}
+      <header>
+         {% block header %}
+            {{ include('_base/header', ignore_missing = true) }}
+         {% endblock %}
+      </header>
+      
       {# 
       -------------------------------------------------------------------
          Block content and main tag
@@ -150,12 +183,14 @@
       <main id="main">
 			{% block content %}{% endblock %}
 		</main>
+      
       {# 
       -------------------------------------------------------------------
          Footer
       -------------------------------------------------------------------
       #}
 		{{ include('_base/footer', ignore_missing = true) }}
+      
       {# 
       -------------------------------------------------------------------
          You can include a JSON-LD schema within this block.

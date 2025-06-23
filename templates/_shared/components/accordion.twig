@@ -1,0 +1,47 @@
+{# PARAMETERS WHEN INCLUDE OR EMBED
+   @param {string} target
+   @param {string} targetPrefix
+   @param {bool} isOpened
+   @param {bool} noBottomMargin
+   @param {string} headingLevel
+   @param {string} heading
+   @param {string} content
+#}
+
+{% set target = target|default(entry.sortOrder is not same as(null) ? (targetPrefix is defined ? targetPrefix ~ entry.sortOrder : entry.sortOrder)) %}
+{% set isOpened = isOpened is defined and isOpened is same as(true) ? true : false %}
+
+{# set default #}
+{% set headingLevel = headingLevel|default('h2') %}
+{% set heading = heading|default(null) %}
+{% set content = content|default(null) %}
+
+{% if heading and content %}
+<div data-fn-accordion {{ isOpened ? 'data-fn-is-open' }} class="{{ noBottomMargin|default(false) ? 'mb-2' : 'mb-full' }}">
+    <{{ headingLevel }}>
+        <button 
+            class="group text-left flex items-center justify-between w-full py-3 border-b border-blue-900"
+            data-fn-target="ac-{{ target }}"
+            aria-expanded="{{ isOpened ? 'true' : 'false' }}" 
+            aria-controls="ac-{{ target }}"
+        >
+            {%- block accordionsHeading %}{# override with embed if needed #}
+                {% if heading %}{{ heading }}{% endif %}
+            {% endblock -%}
+            
+            <span class="shrink-0 flex items-center justify-center ml-4 w-9 h-9 p-1.5 bg-transparent text-blue rounded-full group-hover:bg-blue group-hover:text-white parent-is-open:bg-blue-700 parent-is-open:text-white parent-is-open:rotate-90 transition-all ease-in-out duration-250">
+                <svg class="w-full h-full" viewBox="0 0 24 24"><use xlink:href="#ic-chevron"></use></svg>
+            </span>
+       </button>
+    </{{ headingLevel }}>
+    <div id="ac-{{ target }}" class="{{ not isOpened ? 'h-0' }} overflow-hidden transition-height duration-300">{# do not style this div #}
+        <div class="py-quarter">
+            {%- block accordionsContent %}{# override with embed if needed #}
+                {% if content %}
+                    <div class="richtext">{{ content }}</div>
+                {% endif %}
+            {% endblock -%}
+        </div>
+    </div>
+</div>
+{% endif %}

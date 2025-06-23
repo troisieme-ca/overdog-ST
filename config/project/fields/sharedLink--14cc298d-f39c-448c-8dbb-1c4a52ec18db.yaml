@@ -12,13 +12,30 @@ settings:
   typeSettings:
     __assoc__:
       -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              -
+                - 'volume:cce026c1-81f4-4544-b9d1-42b792810a5e' # Documents
+            -
+              - allowedKinds
+              -
+                - pdf
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+      -
         - entry
         -
           __assoc__:
             -
               - sources
               -
-                - singles
                 - 'section:8c4da01d-7692-4a1a-91b8-b5dc7f795639' # Pages
             -
               - showUnpermittedSections
@@ -38,24 +55,6 @@ settings:
               - '1'
             -
               - allowCustomSchemes
-              - ''
-      -
-        - asset
-        -
-          __assoc__:
-            -
-              - sources
-              -
-                - 'volume:cce026c1-81f4-4544-b9d1-42b792810a5e' # Documents
-            -
-              - allowedKinds
-              -
-                - pdf
-            -
-              - showUnpermittedVolumes
-              - ''
-            -
-              - showUnpermittedFiles
               - ''
   types:
     - url

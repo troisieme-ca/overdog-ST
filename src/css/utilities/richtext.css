@@ -136,6 +136,10 @@
             @apply bg-blue-800;
             content: '';
          }
+
+         p:last-child {
+            @apply mb-0;
+         }
       }
 
 

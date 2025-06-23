@@ -21,6 +21,7 @@ module.exports = {
    content: [
       "./templates/_base/**/*",
       "./templates/_macros/**/*",
+      "./templates/_matrix/**/*",
       "./templates/_navigation/**/*",
       "./templates/_sections/**/*",
       "./templates/_shared/**/*",
@@ -37,10 +38,10 @@ module.exports = {
       --------------------------------------------------------------------------
       */
       fluidCSS: {
-         // Exemple for a logo
-         "fluid-logo": { prop: "width", minSize: "30px", maxSize: "42px", minScreen: "sm", maxScreen: "xxl" },
-         // Exemple for a title - Take a look in preset for a list of predefined fluid text styles
-         "fluid-title-page": { prop: "font-size", minSize: "32px", maxSize: "92px", minScreen: "500px", maxScreen: "xxl" }
+         "fluid-logo-height": { prop: "height", minSize: "18px", maxSize: "36px", minScreen: "sm", maxScreen: "xxl" },
+         "fluid-button-width": { prop: "width", minSize: "40px", maxSize: "48px", minScreen: "sm", maxScreen: "xxl" },
+         "fluid-button-height": { prop: "height", minSize: "40px", maxSize: "48px", minScreen: "sm", maxScreen: "xxl" },
+         "fluid-text-48px": { prop: "font-size", minSize: "28px", maxSize: "48px", minScreen: "500px", maxScreen: "xxl" }
       },
       /*
       -------------------------------------
@@ -95,7 +96,14 @@ module.exports = {
    */
    plugins: [
       plugin(function ({ addVariant }) {
-         // add your Tailwind CSS variants here
+         addVariant("is-open", "&[data-fn-is-open]")
+         addVariant("parent-is-open", "[data-fn-is-open] &")
+
+         // Navigation panel
+         addVariant("nav-open-1", "[data-fn-nav-open='1'] &")
+
+         // Navigation panel body state
+         addVariant("body-nav-open-1", "&[data-fn-nav-open='1']")
       }),
       require("@3ejoueur/tailwindcss-fluid-properties")
    ]

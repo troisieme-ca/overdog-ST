@@ -1,0 +1,40 @@
+{% if hasSectionTitle is not defined and entry.prev and entry.prev.type.handle == 'blockText' %}
+    {% set hasSectionTitle = entry.prev.sectionTitle is not empty ? true : false %}
+{% elseif hasSectionTitle is defined and entry.prev and entry.prev.type.handle != 'blockText' %}
+    {% set hasSectionTitle = null %}
+{% endif %}
+
+{% set sectionTitle = entry.sectionTitle %}
+{% set title = entry.title %}
+{% set text = entry.textEditor %}
+{% set noBottomMargin = entry.noBottomMargin %}
+{% set isAccordion = entry.isAccordion %}
+
+{% if text %}
+<div class="bg-transparent {{ noBottomMargin is same as(true) ? 'mb-2' : 'mb-full' }}">
+    <div class="container">
+        {% if isAccordion is same as(true) %}
+            {% if sectionTitle %}
+            <h2>{{ sectionTitle }}</h2>
+            {% endif %}
+
+            <div class="accordions-group-wrapper">
+                {% embed "_shared/components/accordion" ignore missing with {
+                   'targetPrefix': 'blockText-', 
+                   'noBottomMargin': noBottomMargin, 
+                   'headingLevel': sectionTitle or hasSectionTitle|default(null) ? 'h3' : 'h2',
+                   'heading': title|default('Accordion title'|t),
+                   'content': text
+                } %}
+                {% endembed %}
+            </div>
+        {% else %}
+            {% if title %}
+            <h2>{{ title }}</h2>
+            {% endif %}
+
+            <div class="richtext">{{ text }}</div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}

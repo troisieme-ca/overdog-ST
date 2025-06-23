@@ -1,0 +1,22 @@
+{# PARAMETERS WHEN INCLUDE
+    @param {string} label
+    @param {string} value
+    @param {bool} target
+    @param {string} icon
+#}
+
+{% if label and value %}
+<a
+   class="group flex items-center gap-3"
+   href="{{ value }}"
+   {{ target ? ' target="_blank" rel="noopener noreferrer"' }}
+>
+    {% if icon %}
+    <div class="bg-white text-blue-900 w-12 h-12 p-2.5 rounded-full shrink-0 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+        <svg class="w-full h-full" viewBox="0 0 24 24"><use xlink:href="#{{ icon }}"></use></svg>
+    </div>
+    {% endif %}
+
+    {{ label }}
+</a>
+{% endif %}

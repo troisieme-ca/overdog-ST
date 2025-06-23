@@ -89,6 +89,7 @@
     {% endfor %}
 
     {# Caption #}
+    {% set caption = caption|default(false) %}
     {% set imageCaption = image.assetsCaption|default(null) %}
 
     <figure>
@@ -134,7 +135,7 @@
 
     {# Generic placeholder #}
     <div class="absolute inset-0 bg-gray-200 text-white">
-        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[75%] max-h-[75%]"><use xlink:href="#wave-logo"></use></svg>
+        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[75%] max-h-[75%]"><use xlink:href="#signature-troisieme"></use></svg>
     </div>
    
 {% endif %}

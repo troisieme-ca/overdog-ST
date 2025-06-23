@@ -1,0 +1,5 @@
+{{ include('_shared/components/gallery', {
+    type: entry.galleryType,
+    title: entry.title,
+    images: entry.galleryImages.eagerly().collect()
+}, with_context = false, ignore_missing = true) }}

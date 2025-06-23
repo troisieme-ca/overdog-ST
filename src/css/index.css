@@ -1,10 +1,18 @@
 /* base layer */
 @import "./base/root.css";
 @import "./base/container.css";
+@import "./base/titles.css";
+@import "./base/print.css";
+
+/* components layer */
+@import "./components/buttons.css";
+@import "./components/swiper.css";
 
 /* utilities layer */
-@import "./utilities/richtext.css";
+@import "./utilities/accessibility.css";
 @import "./utilities/height.css";
+@import "./utilities/lazy.css";
+@import "./utilities/richtext.css";
 
 /* Tailwind */
 @tailwind base;

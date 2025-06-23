@@ -1,0 +1,5 @@
+{{ include('_shared/components/documentation', {
+    title: entry.title,
+    documents: entry.documentationFiles.eagerly().collect(),
+    links: entry.documentationLinks
+}, with_context = false, ignore_missing = true) }}

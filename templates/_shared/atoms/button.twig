@@ -1,0 +1,30 @@
+{# PARAMETERS WHEN INCLUDE
+    @param {string} label
+    @param {string} value
+    @param {boolean} target
+#}
+
+{% set variants = {
+    'filled-blue': 'btn-filled-blue',
+    'outlined-blue': 'btn-outlined-blue'
+} %}
+
+{% if label %}
+    {% if value %}
+    <a
+        href="{{ value }}"
+        class="{{ variants[variant|default('filled-blue')] }}"
+        {{ target ? ' target="_blank" rel="noopener noreferrer"' }}
+    >
+    {% else %}
+    <span class="{{ variants[variant|default('filled-blue')] }}">
+    {% endif %}
+
+    {{ label }}
+
+    {% if value %}
+    </a>
+    {% else %}
+    </span>
+    {% endif %}
+{% endif %}

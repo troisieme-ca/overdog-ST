@@ -1,5 +1,37 @@
-{# 
--------------------------------------------------------------------
-   Default navbar
--------------------------------------------------------------------
-#}	
+<div id="navbar" class="sticky inset-x-0 top-0 py-6 border border-blue z-40">
+   {# background div with opacity change - better performance than background-color change #}
+   <div class="opacity-0 h-full w-full absolute top-0 left-0 bg-blue transition-opacity parent-is-open:opacity-100 nav-open-1:opacity-100" aria-hidden="true"></div>
+   
+   <div class="container">
+      <div class="flex items-center justify-between">
+         {# Logo #}
+         <a
+            class="inline-block w-auto fluid-logo-height parent-is-open:text-white nav-open-1:text-white transition-colors"
+            href="{{ siteUrl }}"
+            title="{{ currentSite.group.name }}"
+            aria-label="{{ 'Home'|t }}"
+            rel="home"
+         >
+            <span class="sr-only">{{ currentSite.group.name }}</span>
+            <svg class="w-full h-full" viewBox="0 0 96 18"><use xlink:href="#signature-troisieme"></use></svg>
+         </a>
+
+         {# Buttons #}
+         <div id="nav-buttons-group" class="flex items-center">
+            {# Burger #}
+            <button
+               class="p-2 parent-is-open:text-white nav-open-1:text-white transition-colors"
+               data-fn-nav-button="1"
+               type="button"
+               aria-label="{{ 'Main menu'|t }}"
+               aria-haspopup="true"
+               aria-expanded="false"
+            >
+               <span>{{ 'Menu'|t }}</span>
+            </button>
+         </div>
+      </div>
+   </div>
+</div>
+
+{{ include('_navigation/panel-menu', ignore_missing = true) }}

@@ -6,6 +6,23 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-06-18T19:00:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 99ff4ecb-263e-465c-885f-78119bc0d93d # Texte
+            handle: sectionTitle
+            includeInCards: false
+            instructions: null
+            label: 'Titre de section'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81b0d916-ebbf-4a72-a481-d6673d1e4523
+            userCondition: null
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -79,7 +96,7 @@ fieldLayouts:
             instructions: null
             label: Photo
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: dc2d482b-4874-4c86-a823-2c769173db87

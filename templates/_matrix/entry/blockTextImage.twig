@@ -1,0 +1,15 @@
+{% if hasSectionTitle is not defined and entry.prev and entry.prev.type.handle == 'blockTextImage' %}
+    {% set hasSectionTitle = entry.prev.sectionTitle is not empty ? true : false %}
+{% elseif hasSectionTitle is defined and entry.prev and entry.prev.type.handle != 'blockTextImage' %}
+    {% set hasSectionTitle = null %}
+{% endif %}
+
+{{ include('_shared/components/text-image', {
+    sectionTitle: entry.sectionTitle,
+    hasSectionTitle: hasSectionTitle|default(null),
+    title: entry.title,
+    text: entry.textImageEditor,
+    button: entry.textImageLink,
+    image: entry.textImagePicture.eagerly().one(),
+    alignment: entry.textImageAlignment
+}, with_context = false, ignore_missing = true) }}

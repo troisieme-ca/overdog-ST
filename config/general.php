@@ -60,4 +60,6 @@ return GeneralConfig::create()
     ->securityKey(App::env('CRAFT_SECURITY_KEY') ?: '')
     // Overdog opinionated - important for assets cache replacement
     ->revAssetUrls(true)
+    // Overdog opinionated - change partials folder name
+    ->partialTemplatesPath('_matrix')
 ;

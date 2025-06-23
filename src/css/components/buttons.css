@@ -1,0 +1,49 @@
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 font-normal font-body leading-normal px-6 py-3 transition-colors;
+    }
+
+    .btn-filled-blue {
+        @apply btn bg-blue border border-blue text-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply bg-blue-700 border-blue-700 text-white;
+        }
+    }
+
+    .btn-outlined-blue {
+        @apply btn bg-transparent border border-blue text-blue;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply bg-blue text-white;
+        }
+    }
+
+    .btn-carousel-nav {
+        @apply fluid-button-width fluid-button-height rounded-full p-1 flex items-center justify-center transition-colors;
+    }
+
+    .btn-carousel-nav-filled-blue {
+        @apply btn-carousel-nav bg-blue text-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply bg-blue-700;
+        }
+    }
+
+    .btn-carousel-nav-outlined-blue {
+        @apply btn-carousel-nav border border-blue text-blue;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @apply bg-blue-700 border-blue-700 text-white;
+        }
+    }
+}

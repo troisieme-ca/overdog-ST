@@ -1,0 +1,17 @@
+@layer base {
+    @media print {
+        #nav-buttons-group,
+        nav[data-fn-nav-panel],
+        footer {
+            @apply hidden;
+        }
+        
+        div[data-fn-accordion] > div {
+            @apply h-auto;
+        }
+       
+        * {
+            @apply !text-black;
+        }
+    }
+}

@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - 2025-05-27
+## [2.0.0] - 2025-06-23
 
 ### Updated
 
@@ -14,9 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Ckeditor 5 default configs
 - Add module Tj Custom Admin Notices
 - Add module Tj Ckeditor Customizations
-- Add fields
+- Add basic fields
 - Add Privacy policy single
 - Add Terms of use single
+- Add base styles
+- Add swiper
+- Add sliding menu
+- Add sticky navbar
 
 ## [1.6.2.1] - 2025-05-20
 

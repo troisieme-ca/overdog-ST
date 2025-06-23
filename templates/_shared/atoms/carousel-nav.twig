@@ -1,0 +1,22 @@
+{# PARAMETERS WHEN INCLUDE
+   @param {string} prefix
+   @param {string} variant
+#}
+
+{% set variants = {
+    'filled-blue': 'btn-carousel-nav-filled-blue',
+    'outlined-blue': 'btn-carousel-nav-outlined-blue'
+} %}
+
+{% set prefix = prefix|default(null) %}
+
+<div class="flex items-center justify-center gap-4">
+    <button class="{{ prefix }}swiper-button-prev {{ variants[variant|default('filled-blue')] }} mt-8" type="button" title="{{ 'Previous'|t }}">
+        <span class="sr-only">{{ 'Previous'|t }}</span>
+        <svg class="w-full h-full scale-x-[-1]" viewBox="0 0 24 24"><use xlink:href="#ic-chevron"></use></svg>
+    </button>
+    <button class="{{ prefix }}swiper-button-next {{ variants[variant|default('filled-blue')] }} mt-8" type="button" title="{{ 'Next'|t }}">
+        <span class="sr-only">{{ 'Next'|t }}</span>
+        <svg class="w-full h-full" viewBox="0 0 24 24"><use xlink:href="#ic-chevron"></use></svg>
+    </button>
+</div>

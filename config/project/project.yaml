@@ -1,4 +1,4 @@
-dateModified: 1750195059
+dateModified: 1750708378
 elementSources:
   craft\elements\Entry:
     -
@@ -123,6 +123,7 @@ meta:
     8f8d814d-a865-4cbc-a6bf-b794b8559607: Légende # Légende
     14cc298d-f39c-448c-8dbb-1c4a52ec18db: Link # Link
     14cd5d53-35a9-4b02-a1e4-5ff467c3fa53: Texte # Texte
+    15e8499b-7592-48c8-9568-b7d60048c228: 'SEO Title' # SEO Title
     66c9ccc5-e6eb-4406-a56d-3b94e35cd2c3: Date # Date
     77b0d538-f113-4240-ac69-fbc2cb21f912: Galerie # Galerie
     81dca28e-68dc-4e2f-b181-1c4ac16d2abb: Medium # Medium

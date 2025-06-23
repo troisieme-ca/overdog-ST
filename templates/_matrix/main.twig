@@ -1,0 +1,18 @@
+{# 
+   MATRIX CONTENT
+   This file is used as the main matrix content router for block type
+   ***
+#}
+
+{# cache the content in matrix to reduce the db queries (lot with all relations) #}
+{% cache using key "matrix-main-cache" %}
+
+    {% set blocks = entry.sharedMainMatrix.collect() %}
+
+    {% if blocks|length %}
+        {% for block in blocks %}
+            {{ block.render() }}
+        {% endfor %}
+    {% endif %}
+
+{% endcache %}

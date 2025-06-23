@@ -1,8 +1,39 @@
-{# 
--------------------------------------------------------------------
-   Footer
--------------------------------------------------------------------
-#}	
-<footer class="container pb-quarter">
-   <div class="text-5">{{ "© #{'now'|date('Y')} • #{currentSite.group.name}" }}</div>
+{% import '_macros' as macros %}
+
+{% set privacyPage = craft.entries.id(macros.getEntryId('PRIVACY_POLICY_ID')).one() %}
+{% set termsPage = craft.entries.id(macros.getEntryId('TERMS_OF_USE_ID')).one() %}
+
+<footer>
+   <div class="container">
+      <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-quarter py-quarter">
+         <div class="flex flex-col flex-wrap lg:flex-row gap-2">
+            <div class="text-center lg:text-left">{{ "© #{'now'|date('Y')} • #{currentSite.group.name}" }}</div>
+
+            {% if privacyPage or termsPage %}
+            <ul class="flex flex-col md:flex-row items-center justify-center gap-1">
+               {% if termsPage %}
+               <li class="first:[&>span]:hidden lg:first:[&>span]:inline">
+                  <span class="hidden md:inline">  | </span>
+                  <a href="{{ termsPage.url }}">{{ termsPage.title }}</a>
+               </li>
+               {% endif %}
+               
+               {% if privacyPage %}
+               <li>
+                  <span class="hidden md:inline">  | </span>
+                  <a href="{{ privacyPage.url }}">{{ privacyPage.title }}</a>
+               </li>
+               {% endif %}
+            </ul>
+            {% endif %}
+         </div>
+         <div>
+            <a class="inline-block" href="https://www.troisieme.ca" target="_blank" rel="noopener noreferrer" title="troisième">
+               <svg class="w-[96px] h-[18px]">
+                  <use xlink:href="#signature-troisieme"></use>
+               </svg>
+            </a>
+         </div>
+      </div>
+   </div>
 </footer>

@@ -40,5 +40,14 @@ return [
 
    /* No content */
    "There are no posts at the moment." => "Il n’y a aucune publication pour l’instant.",
+
+   /* Navbar */
+   "Home" => "Accueil",
+   "Main menu" => "Menu principal",
+   "Menu" => "Menu",
    
+   /* Components */
+   "Documents and links" => "Documents et liens",
+   "In pictures" => "En images",
+   "Accordion title" => "Titre de mon accordéon",
 ];

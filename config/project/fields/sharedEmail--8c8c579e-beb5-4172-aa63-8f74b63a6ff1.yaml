@@ -6,5 +6,5 @@ searchable: false
 settings:
   placeholder: null
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\fields\Email
