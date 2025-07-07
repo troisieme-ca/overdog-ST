@@ -19,6 +19,7 @@ return [
    "to" => "au",
    "F j, Y" => "j F Y",
    "F j" => "j F",
+   "G:i" => "G:i",
 
    /* Language switcher */
    "Switch language" => "Changer la langue",

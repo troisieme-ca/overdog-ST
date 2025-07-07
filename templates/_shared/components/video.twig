@@ -1,13 +1,20 @@
 {# PARAMETERS WHEN INCLUDE
+    @param {string} sectionTitle
     @param {string} videoTitle
     @param {string} videoSource
     @param {string} videoId
 #}
 
+{% set sectionTitle = sectionTitle|default(null) %}
+
 {% if videoSource and videoId %}
 <div class="bg-transparent mb-full">
     <div class="container">
         <div class="max-w-screen-lg mx-auto">
+            {% if sectionTitle %}
+            <h2>{{ sectionTitle }}</h2>
+            {% endif %}
+
             <div class="aspect-16/9 overflow-hidden" data-lazy-iframe="wrapper">
                 {% if videoSource == 'vimeo' %}
                 <lazy-iframe 

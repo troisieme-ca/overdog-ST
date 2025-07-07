@@ -1,59 +1,8 @@
 {% extends '_base/layout' %}
 
-{% set plainText = entry.sharedPlainText %}
-{% set minimalist = entry.sharedMinimalist %}
-{% set extraLight = entry.sharedExtraLightText %}
-{% set light = entry.sharedLightText %}
-{% set medium = entry.sharedMediumText %}
-{% set full = entry.sharedFullText %}
-
 {% block content %}
-    <div class="container">
-        <div class="flex items-center gap-4 py-quarter">
-            <a class="btn-filled-blue" href="/">Mon bouton primaire</a>
-            <a class="btn-outlined-blue" href="/">Mon bouton secondaire</a>
-        </div>
-
-        {% if plainText %}
-        <div class="mb-4">
-            <p>{{ plainText }}</p>
-        </div>
-        {% endif %}
-
-        {% if minimalist %}
-        <div class="mb-4">
-            <p>{{ minimalist }}</p>
-        </div>
-        {% endif %}
-
-        {% if extraLight %}
-        <div class="mb-4">
-            <div class="richtext">{{ extraLight }}</div>
-        </div>
-        {% endif %}
-
-        {% if light %}
-        <div class="mb-4">
-            <div class="richtext">{{ light }}</div>
-        </div>
-        {% endif %}
-
-        {% if medium %}
-        <div class="mb-4">
-            <div class="richtext">{{ medium }}</div>
-        </div>
-        {% endif %}
-        
-        {% if full %}
-        <div class="mb-4">
-            <div class="richtext">{{ full }}</div>
-        </div>
-        {% endif %}
-    </div>
-
     {# Modules #}
     {{ include('_matrix/main', {
         entry: entry
     }, with_context = false, ignore_missing = true) }}
-    
 {% endblock %}

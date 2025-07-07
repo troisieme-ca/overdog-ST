@@ -12,12 +12,21 @@
             aria-label="{{ 'Home'|t }}"
             rel="home"
          >
-            <span class="sr-only">{{ currentSite.group.name }}</span>
-            <svg class="w-full h-full" viewBox="0 0 96 18"><use xlink:href="#signature-troisieme"></use></svg>
+            <span class="fluid-text-8 font-bold leading-none text-slate-800 mb-6 flex">
+               Overdog
+               <span class="-mt-3 ml-2 flex items-center justify-center w-[0.8em] h-[0.8em] bg-blue-500 rounded-full">
+                  <span class="text-[0.3em] text-white leading-none mt-0.5">ST</span>
+               </span>
+            </span>
+            {# <span class="sr-only">{{ currentSite.group.name }}</span>
+            <svg class="w-full h-full" viewBox="0 0 96 18"><use xlink:href="#signature-troisieme"></use></svg> #}
          </a>
 
          {# Buttons #}
-         <div id="nav-buttons-group" class="flex items-center">
+         <div id="nav-buttons-group" class="flex items-center gap-2">
+            {# Lang #}
+            {{ include('_navigation/_language-switcher', ignore_missing = true) }}
+
             {# Burger #}
             <button
                class="p-2 parent-is-open:text-white nav-open-1:text-white transition-colors"

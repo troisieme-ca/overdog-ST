@@ -51,17 +51,16 @@
 {# Loop through the switcherLinks array #}
 {% if switcherLinks is defined and switcherLinks|length %}
 <div>
-   <ul class="{{ variant is defined and variant is same as('footer') ? 'fluid-text-14px' }}">
+   <ul>
       {# Current language always first #}
       {% for switcherLink in switcherLinks|sort(v => v.language != currentSite.language) %}
          <li>
             {% if currentSite.language is same as(switcherLink.language) %}
                <span
-                  class="{{ not (variant is defined and variant is same as('footer')) ? 'min-h-12 btn btn-filled-black btn-squared text-medium' }}"
                   lang="{{ switcherLink.language }}"
                   aria-label="{{ 'Switch language'|t }}"
                >
-                  {{ variant is defined and variant is same as('footer') ? switcherLink.title : switcherLink.title [0:2] }}
+                  {{ switcherLink.title [0:2] }}
                </span>
             {% else %}
                <a
@@ -69,9 +68,8 @@
                   hreflang="{{ switcherLink.language }}"
                   lang="{{ switcherLink.language }}"
                   aria-label="{{ 'Switch language'|t }}"
-                  class="{{ variant is defined and variant is same as('footer') ? 'hover:text-slate-900 hover:font-medium transition-all' : 'min-h-12 btn btn-filled-black btn-squared font-medium' }}"
                >
-                  {{ variant is defined and variant is same as('footer') ? switcherLink.title : switcherLink.title [0:2] }}
+                  {{ switcherLink.title [0:2] }}
                </a>
             {% endif %}
          </li>

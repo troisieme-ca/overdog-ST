@@ -26,7 +26,7 @@
   "require": {
     "craftcms/aws-s3": "2.2.3",
     "craftcms/ckeditor": "^4.9.0",
-    "craftcms/cms": "5.7.10",
+    "craftcms/cms": "5.8.3",
     "ianreid/switcher": "^1.1",
     "nystudio107/craft-retour": "5.0.11",
     "vlucas/phpdotenv": "^5.4.0"

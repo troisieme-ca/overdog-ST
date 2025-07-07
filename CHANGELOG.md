@@ -5,22 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - 2025-06-23
+## [2.0.0] - 2025-07-07
 
-### Updated
+### Added
 
-- Update Craft CMS version 4.15.4 to 5.7.10
-- Update Plugins
 - Add Ckeditor 5 default configs
 - Add module Tj Custom Admin Notices
 - Add module Tj Ckeditor Customizations
 - Add basic fields
+- Add basic modules for page builder
 - Add Privacy policy single
 - Add Terms of use single
 - Add base styles
 - Add swiper
 - Add sliding menu
 - Add sticky navbar
+- Add Switchlang
+
+### Updated
+
+- Update Craft CMS version 4.15.4 to 5.8.3
+- Update Plugins
+
+### Removed
+
+- Remove Redactor plugin
 
 ## [1.6.2.1] - 2025-05-20
 

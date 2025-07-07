@@ -12,12 +12,16 @@
 
 {% block content %}
 
-  <div class="container">
-    <h1>{{ 'An error has occurred…'|t }}</h1>
+    <div class="py-full text-center">
+        <div class="container">
+            <div class="max-w-screen-lg mx-auto">
+                <h1 class="title-01 mb-8">{{ 'An error has occurred…'|t }}</h1>
 
-    <p>{{ 'This page does not exist! Please use the main menu to go to another page.'|t }}</p>
+                <p>{{ 'This page does not exist! Please use the main menu to go to another page.'|t }}</p>
 
-    <a href="{{ siteUrl }}">{{ 'Back to homepage'|t }}</a>
-  </div>
+                <a class="btn-filled-blue mt-8" href="{{ siteUrl }}">{{ 'Back to homepage'|t }}</a>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

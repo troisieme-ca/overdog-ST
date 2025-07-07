@@ -1,5 +1,8 @@
 {% extends '_base/layout' %}
 
 {% block content %}
-
+    {# Modules #}
+    {{ include('_matrix/main', {
+        entry: entry
+    }, with_context = false, ignore_missing = true) }}
 {% endblock %}
