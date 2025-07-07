@@ -13,9 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add module Tj Custom Admin Notices
 - Add module Tj Ckeditor Customizations
 - Add basic fields
-- Add basic modules for page builder
+- Add basic blocks for page builder
+- Add Global settings single
 - Add Privacy policy single
 - Add Terms of use single
+- Add Pages structure
+- Add Call to action Structure
 - Add base styles
 - Add swiper
 - Add sliding menu
@@ -26,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Craft CMS version 4.15.4 to 5.8.3
 - Update Plugins
+- Update environment variables and general configs
 
 ### Removed
 
