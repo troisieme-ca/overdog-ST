@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   88fdf07a-3e91-43bb-906d-a4c178569b2f:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -23,41 +25,11 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-06-17T20:59:00+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: 'Titre de la vidéo'
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            required: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: f48d83e8-b024-4896-afb8-7bc196fb79f9
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-06-17T21:03:52+00:00'
+            dateAdded: '2025-07-15T17:18:39+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: a466b70c-6e68-4ab7-b6ab-e51c8e170bef # Source
-            handle: null
+            fieldUid: d1acd12f-650e-4720-87f5-6c852e318be3 # Vidéo
+            handle: videoEntry
             includeInCards: false
             instructions: null
             label: null
@@ -65,24 +37,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2c7af500-8f79-4036-a81e-6b2b5aef8111
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-06-17T21:03:52+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 99ff4ecb-263e-465c-885f-78119bc0d93d # Texte
-            handle: videoId
-            includeInCards: false
-            instructions: null
-            label: 'ID de la vidéo'
-            providesThumbs: false
-            required: true
-            tip: 'Le code correspond à l’identifiant dans l’adresse URL de la vidéo (ex: NjVugzSR7HA)'
-            type: craft\fieldlayoutelements\CustomField
-            uid: 10e76001-893f-45a3-a2fd-53291e40a402
+            uid: 7c0ac736-cdce-4ed4-b10c-f1a5a1e75396
             userCondition: null
             warning: null
             width: 100
@@ -90,7 +45,7 @@ fieldLayouts:
         uid: 63e1bef8-711f-4db8-ac5a-57df0c9471d9
         userCondition: null
 handle: blockVideo
-hasTitleField: true
+hasTitleField: false
 icon: video
 name: Vidéo
 showSlugField: false

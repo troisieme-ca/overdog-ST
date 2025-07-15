@@ -1,4 +1,4 @@
-dateModified: 1751909483
+dateModified: 1752606124
 elementSources:
   craft\elements\Entry:
     -
@@ -15,6 +15,7 @@ elementSources:
       type: native
     -
       heading: Pages
+      key: 'heading:cd495346-7940-4760-9b19-c64e198b3519'
       type: heading
     -
       defaultSort:
@@ -40,6 +41,7 @@ elementSources:
       type: native
     -
       heading: Entrées
+      key: 'heading:97a3f027-0084-42f4-ab37-ae1bcb378390'
       type: heading
     -
       defaultSort:
@@ -48,6 +50,16 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'section:d9fa5a1b-6652-4d0f-80eb-02c76dee0a7e' # Appel à l’action
+      tableAttributes:
+        - status
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:a031deb0-8140-4aa7-a097-6c6f6ad32984' # Vidéo
       tableAttributes:
         - status
       type: native
@@ -124,6 +136,7 @@ meta:
     14cc298d-f39c-448c-8dbb-1c4a52ec18db: Link # Link
     14cd5d53-35a9-4b02-a1e4-5ff467c3fa53: Texte # Texte
     15e8499b-7592-48c8-9568-b7d60048c228: 'SEO Title' # SEO Title
+    31d6a54d-d5ab-411f-bed8-2c2e862a8ae3: Vidéo # Vidéo
     66c9ccc5-e6eb-4406-a56d-3b94e35cd2c3: Date # Date
     77b0d538-f113-4240-ac69-fbc2cb21f912: Galerie # Galerie
     81dca28e-68dc-4e2f-b181-1c4ac16d2abb: Medium # Medium
@@ -140,6 +153,7 @@ meta:
     85126b0f-2b2a-45d7-b83b-54eb3a65d2e1: 'Conditions d’utilisation' # Conditions d’utilisation
     262120ce-e2a8-47f5-a72d-33caab036de5: 'Paramètres globaux' # Paramètres globaux
     15658874-c139-4bd8-8ddd-a3b817dcdccc: 'Documents et liens' # Documents et liens
+    a031deb0-8140-4aa7-a097-6c6f6ad32984: Vidéo # Vidéo
     a61e898b-80d6-44b1-9f22-2f51b72df97e: Images # Images
     a466b70c-6e68-4ab7-b6ab-e51c8e170bef: Source # Source
     aaf49334-7ca1-448e-850b-ab60cbbcd986: 'Pages par défaut' # Pages par défaut
@@ -153,6 +167,7 @@ meta:
     cce026c1-81f4-4544-b9d1-42b792810a5e: Documents # Documents
     cd312fa6-b8b3-47b4-8f03-7a6c47772c05: Bannière # Bannière
     ced25593-9a15-4f62-944f-75a5e88cf204: Liens # Liens
+    d1acd12f-650e-4720-87f5-6c852e318be3: Vidéo # Vidéo
     d9fa5a1b-6652-4d0f-80eb-02c76dee0a7e: 'Appel à l’action' # Appel à l’action
     d59e41c4-22c4-4111-b96d-5a088bdb66d2: Accueil # Accueil
     d529af64-31d5-47b9-a37f-5218bab2e1f5: Image # Image

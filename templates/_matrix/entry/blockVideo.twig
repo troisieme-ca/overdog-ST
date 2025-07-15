@@ -1,6 +1,4 @@
 {{ include('_shared/components/video', {
     sectionTitle: entry.sectionTitle,
-    videoTitle: entry.title,
-    videoSource: entry.videoSource,
-    videoId: entry.videoId
+    video: entry.videoEntry.eagerly().one()
 }, with_context = false, ignore_missing = true) }}

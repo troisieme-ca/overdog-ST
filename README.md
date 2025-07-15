@@ -3,7 +3,7 @@
 This Craft CMS starter project is for developers who want to build a website or small web application from a solid foundation based on best practices.
 
 ## Version
-2.0.0
+2.1.0
 
 ## Installation
 

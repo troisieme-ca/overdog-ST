@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2025-07-15
+
+### Added
+
+- Add Video structure
+- Add new entries field for videos
+
+### Changed
+
+- Update main matrix to use entry field instead
+- Change minimalist field handle for consistency with other fields
+
+### Updated
+
+- Update Craft CMS version 5.8.3 to 5.8.6
+
 ## [2.0.0] - 2025-07-07
 
 ### Added

@@ -1,0 +1,36 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 31d6a54d-d5ab-411f-bed8-2c2e862a8ae3 # Vidéo
+handle: structureVideo
+maxAuthors: 1
+name: Vidéo
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  8517b590-fce4-474f-b972-a09fb64cd116: # Français
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  eae966b9-c034-46cf-8e92-dd12ebfba113: # English
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 4b5f6be5-8f98-4691-b658-e34d7040a91c
+type: structure
