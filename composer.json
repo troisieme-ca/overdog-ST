@@ -1,7 +1,7 @@
 {
   "name": "troisieme/overdog",
   "description": "A Craft CMS scaffolding project",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "keywords": [
     "Craft CMS starter",
     "Craft CMS boilerplate",
@@ -25,10 +25,10 @@
   "prefer-stable": true,
   "require": {
     "craftcms/aws-s3": "2.2.3",
-    "craftcms/ckeditor": "^4.9.0",
-    "craftcms/cms": "5.8.6",
+    "craftcms/ckeditor": "4.10.1",
+    "craftcms/cms": "5.8.17",
     "ianreid/switcher": "^1.1",
-    "nystudio107/craft-retour": "5.0.11",
+    "nystudio107/craft-retour": "5.0.12",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2025-09-12
+
+### Changed
+
+- Update table css to add horizontal scroll on mobile
+
+### Updated
+
+- Update Craft CMS version 5.8.6 to 5.8.17
+- Update Retour and CKEditor plugins
+
 ## [2.1.0] - 2025-07-15
 
 ### Added
